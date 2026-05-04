@@ -7,16 +7,14 @@
 <style>
 body{
 margin:0;
-font-family:Arial,sans-serif;
-background-image:url("7B0E287F-F290-41E8-B4EB-ACD98AFFCB92.png");
-background-size:cover;
-background-position:center;
+font-family:Arial;
+background:#111;
 }
 
 .overlay{
 background:rgba(0,0,0,0.7);
 min-height:100vh;
-padding:40px;
+padding:30px;
 }
 
 .container{
@@ -26,9 +24,9 @@ margin:auto;
 
 .card{
 background:white;
-padding:30px;
-border-radius:20px;
-margin-bottom:30px;
+padding:25px;
+border-radius:15px;
+margin-bottom:20px;
 }
 
 h1{
@@ -37,19 +35,18 @@ text-align:center;
 }
 
 .question{
-margin-bottom:25px;
-padding:20px;
 background:#f5f5f5;
+padding:15px;
 border-left:5px solid #2e7d32;
-border-radius:12px;
+margin-bottom:15px;
+border-radius:10px;
 }
 
 button{
 background:#2e7d32;
 color:white;
+padding:12px 25px;
 border:none;
-padding:15px 30px;
-font-size:18px;
 border-radius:10px;
 cursor:pointer;
 }
@@ -58,34 +55,34 @@ cursor:pointer;
 .wrong{color:red;font-weight:bold;}
 
 .explanation{
-background:#eef7ee;
-padding:15px;
+background:#eaf7ea;
+padding:10px;
 margin-top:10px;
-border-radius:10px;
+border-radius:8px;
 }
 
+/* TEXT HIGHLIGHT */
 mark{
 background:transparent;
-padding:4px;
-border-radius:6px;
+padding:3px;
+border-radius:5px;
 transition:0.4s;
 }
 
 .show mark{
-background:#fff176;
+color:black;
 }
 
-.label{
-display:none;
-font-size:14px;
-font-weight:bold;
-color:#2e7d32;
-}
+.show .q35{background:#fff176;}
+.show .q36{background:#a5d6a7;}
+.show .q37{background:#90caf9;}
+.show .q38{background:#ffcc80;}
+.show .q39{background:#ce93d8;}
+.show .q40{background:#f48fb1;}
+.show .q41{background:#ffe082;}
+.show .q42{background:#80cbc4;}
 
-.show .label{
-display:inline;
-}
-
+/* TABLE */
 table{
 width:100%;
 border-collapse:collapse;
@@ -105,58 +102,52 @@ color:white;
 </head>
 
 <body>
+
 <div class="overlay">
 <div class="container">
 
-<h1>Ағылшын тілі Reading Task Tests</h1>
+<h1>Reading Task Test</h1>
 
 <!-- TEXT -->
 <div class="card" id="textCard">
-<h2>Text 1: Green Homes, Dream Homes</h2>
+
+<h2>Green Homes, Dream Homes</h2>
 
 <p>
 These days, more and more people want to help the Earth. Recycling and using
-<span class="label">Q41</span><mark>eco-friendly shopping bags</mark>
+<mark class="q41">eco-friendly shopping bags</mark>
 are small changes to our daily lives that can bring important benefits to the Earth.
 </p>
 
 <p>
-Many people now choose to do even bigger things for the Earth. Some people choose
-to spend a little more money on their new homes in order to have a green home.
-
-<span class="label">Q42</span><mark>The green movement started about 40 years ago</mark>.
-
-<span class="label">Q35</span><mark>Using solar energy is a very popular way</mark>
-to have a green home.
+Many people now choose to do even bigger things for the Earth. Some people choose to spend a little more money on their new homes in order to have a green home. The green movement started about 40 years ago, and it is very big now.
+<mark class="q42">The green movement started about 40 years ago</mark>.
+Using solar energy is a very popular way to have a green home.
+<mark class="q35">Using solar energy is a very popular way</mark>.
 </p>
 
 <p>
-Builders think about materials.
-
-<span class="label">Q37</span><mark>Green builders also want to use materials that last a very long time</mark>.
+Builders of green homes think about many different ways to make a building more eco-friendly. Building materials are one of the biggest decisions. Green builders also want to use
+<mark class="q37">materials that last a very long time</mark>.
 </p>
 
 <p>
-Green homes help people recycle, use less water and minimize energy.
+<mark class="q39">Building a regular home is often more expensive than building a green home</mark>.
 </p>
 
 <p>
-<span class="label">Q39</span><mark>Although building a green home is often more expensive than a regular home</mark>,
-most owners say it’s a good idea.
-
-<span class="label">Q40</span><mark>Eco homes are good for the Earth</mark>
-and people support them more and more
-<span class="label">Q38</span><mark>more and more people choose this lifestyle</mark>.
+If people build eco-friendly houses,
+<mark class="q40">it is good for the Earth</mark>.
+More and more people support this lifestyle
+<mark class="q38">approved by the majority</mark>.
 </p>
 
 </div>
 
-<!-- QUESTIONS -->
+<!-- QUIZ -->
 <div class="card">
 <div id="quiz"></div>
-<div style="text-align:center;">
 <button onclick="checkAnswers()">Check Results</button>
-</div>
 </div>
 
 <!-- RESULTS -->
@@ -165,31 +156,25 @@ and people support them more and more
 <!-- LIFEKHACKS + SYNONYMS -->
 <div class="card">
 
-<h2>📌 Лайфхактар (How to solve reading fast)</h2>
+<h2>📌 Лайфхаки</h2>
 <ul>
-<li>Сұрақтағы кілт сөзді таб</li>
-<li>Синоним ізде (solar = sun)</li>
-<li>Сандар мен жылдарға назар аудар</li>
-<li>Text scanning жаса (толық оқыма)</li>
-<li>Main idea — бүкіл мәтіннің мағынасы</li>
-<li>Қарама-қарсы сөздерге мән бер</li>
+<li>Кілт сөзді тап</li>
+<li>Синонимді ізде</li>
+<li>Сан, жылдарға назар аудар</li>
+<li>Толық оқымай scan жаса</li>
+<li>Main idea = жалпы ой</li>
 </ul>
 
 <h2>📚 Синонимдер</h2>
 
 <table>
-<tr>
-<th>Word</th>
-<th>Synonym</th>
-<th>Қазақша</th>
-</tr>
+<tr><th>Word</th><th>Synonym</th><th>Қазақша</th></tr>
 <tr><td>Solar</td><td>Sun energy</td><td>Күн энергиясы</td></tr>
 <tr><td>Eco-friendly</td><td>Green</td><td>Экологиялық</td></tr>
 <tr><td>Expensive</td><td>Costly</td><td>Қымбат</td></tr>
 <tr><td>Started</td><td>Began</td><td>Басталды</td></tr>
 <tr><td>Help</td><td>Support</td><td>Көмектесу</td></tr>
 <tr><td>Popular</td><td>Common</td><td>Танымал</td></tr>
-<tr><td>Long-lasting</td><td>Durable</td><td>Ұзаққа шыдайтын</td></tr>
 </table>
 
 </div>
@@ -203,49 +188,49 @@ const questions=[
 {
 q:"35. Solar energy is",
 options:["earth","sun","wind","sky"],
-answer:1,
-exp:"Solar energy = күн энергиясы"
+a:1,
+exp:"Solar = күн энергиясы"
 },
 {
 q:"36. Desire means",
 options:["hate","difference","opinion","wish"],
-answer:3,
+a:3,
 exp:"Desire = тілек"
 },
 {
 q:"37. Quality depends on",
 options:["cheap","modern","regular","long-lasting"],
-answer:3,
+a:3,
 exp:"Long-lasting materials"
 },
 {
 q:"38. Eco lifestyle is",
 options:["not popular","less","future","supported"],
-answer:3,
-exp:"More and more people support it"
+a:3,
+exp:"Most people support it"
 },
 {
 q:"39. Regular home is",
 options:["expensive","more expensive","cheaper","equal"],
-answer:2,
+a:2,
 exp:"Green home is more expensive"
 },
 {
 q:"40. Eco homes are",
 options:["bad","good","cheap","random"],
-answer:1,
+a:1,
 exp:"Main idea = Earth protection"
 },
 {
 q:"41. People use",
 options:["eco bags","plastic","paper","modern"],
-answer:0,
-exp:"First paragraph"
+a:0,
+exp:"Direct text"
 },
 {
 q:"42. Green movement",
 options:["40 years ago","recent","10 years","never"],
-answer:0,
+a:0,
 exp:"About 40 years ago"
 }
 ];
@@ -271,7 +256,7 @@ questions.forEach((x,i)=>{
 let sel=document.querySelector(`input[name=q${i}]:checked`);
 let chosen=sel?x.options[sel.value]:"no answer";
 
-if(sel && sel.value==x.answer){
+if(sel && sel.value==x.a){
 score++;
 res+=`<p class="correct">✔ ${x.q}</p>`;
 }else{
@@ -281,7 +266,7 @@ res+=`<p class="wrong">✘ ${x.q}</p>`;
 res+=`
 <div class="explanation">
 Сенің жауабың: ${chosen}<br>
-Дұрыс жауап: <b>${x.options[x.answer]}</b><br>
+Дұрыс жауап: <b>${x.options[x.a]}</b><br>
 Түсіндірме: ${x.exp}<br>
 </div>`;
 });
@@ -289,11 +274,12 @@ res+=`
 document.getElementById("results").innerHTML=
 `<h2>Score: ${score}/8</h2>`+res;
 
+/* SHOW HIGHLIGHT */
 document.getElementById("textCard").classList.add("show");
+
 }
 
 </script>
 
 </body>
 </html>
-
