@@ -254,44 +254,89 @@ ways.
 </div>
 
 </div>
+<!-- ================= TEST FOR TEXT 2 ================= -->
+<div class="card">
+<h2>Questions (43–50)</h2>
+<div id="quiz2"></div>
+<button onclick="checkAnswers2()">Check Results</button>
+</div>
 
-<script>
+<div class="card" id="results2"></div>
+  const questions2=[
 
-const questions=[
-
-{q:"35. Popular way of having a green home is using",options:["A) earth","B) sun","C) wind","D) sky"],answer:1,kaz:"Мәтінде solar energy айтылған."},
-
-{q:"36. There are many volunteers who show their _____",options:["A) difference","B) hatred","C) opinion","D) desire"],answer:3,kaz:"Адамдар Жерді қорғауға үлес қосқысы келеді."},
-
-{q:"37. The quality of green homes depends on",options:["A) cheap","B) new","C) regular","D) long-lasting"],answer:3,kaz:"Ұзаққа шыдайтын материалдар."},
-
-{q:"38. Eco-friendly way of life is",options:["A) not affordable","B) less popular","C) future","D) approved"],answer:3,kaz:"Көпшілік қолдайды."},
-
-{q:"39. Building a regular home is often",options:["A) more expensive","B) much expensive","C) cheaper","D) reasonable"],answer:2,kaz:"Green home қымбатырақ."},
-
-{q:"40. Eco homes are",options:["A) not efficient","B) good for Earth","C) cheap","D) homeless"],answer:1,kaz:"Табиғатқа пайдалы."},
-
-{q:"41. These days people use",options:["A) eco bags","B) paper","C) modern","D) plastic"],answer:0,kaz:"Eco-friendly bags."},
-
-{q:"42. The green movement",options:["A) long ago","B) several","C) decade","D) recent"],answer:0,kaz:"40 жыл бұрын басталған."},
-
-{q:"43. Music improves:",options:["A) reading skills in the brain","B) writing skills in the brain","C) hearing abilities in the brain","D) language abilities in the brain"],answer:3,kaz:"Music boosts language abilities."},
+{q:"43. Music improves:",options:["A) reading skills in the brain","B) writing skills in the brain","C) hearing abilities in the brain","D) language abilities in the brain"],answer:3,kaz:"Мәтінде music language abilities жақсартады делінген."},
 
 {q:"44. The text is about:",options:["A) a connection between music and language abilities","B) playing different types of musical instruments","C) different instruments and musicians","D) brain functioning and different types of patients"],answer:0,kaz:"Негізгі идея — музыка мен тіл байланысы."},
 
-{q:"45. According to the researcher Nina Kraus playing a musical instrument:",options:["A) can boost a person's hearing ability","B) can boost a person’s dancing skills","C) can boost a person’s ability to talk in a noisy room","D) can boost a person’s writing skills"],answer:0,kaz:"Музыкалық аспап естуді жақсартады."},
+{q:"45. Nina Kraus says that playing a musical instrument:",options:["A) can boost a person's hearing ability","B) can boost dancing skills","C) can boost talking in a noisy room","D) can boost writing skills"],answer:0,kaz:"Музыкалық аспап есту қабілетін жақсартады."},
 
 {q:"46. The synonym of improve is",options:["A) roast","B) boost","C) toast","D) goast"],answer:1,kaz:"Improve = boost."},
 
-{q:"47. The reason why musicians can hear better is",options:["A) that they are trained to pay attention to particular sounds","B) that they are trained to sing and play different instruments","C) that they hear their own instruments and many others","D) that they use certain language abilities in the brain"],answer:0,kaz:"Олар нақты дыбыстарға назар аударады."},
+{q:"47. Musicians can hear better because:",options:["A) they pay attention to sounds","B) they sing songs","C) they hear many instruments","D) they use brain language parts"],answer:0,kaz:"Олар нақты дыбыстарға назар аударады."},
 
-{q:"48. Find the true statement",options:["A) Nina Kraus plays in an orchestra","B) Nina Kraus is a violinist","C) Nina Kraus is a graduate of Harvard University","D) Nina Kraus is a researcher"],answer:3,kaz:"Мәтінде researcher деп жазылған."},
+{q:"48. Find the true statement",options:["A) Nina Kraus plays in orchestra","B) Nina Kraus is violinist","C) Nina Kraus graduated Harvard","D) Nina Kraus is a researcher"],answer:3,kaz:"Nina Kraus — researcher."},
 
-{q:"49. Music helps people to improve",options:["A) reading, speaking and dancing","B) sleeping, swimming and walking","C) memory, listening and concentration","D) writing, listening and painting"],answer:2,kaz:"Соңғы абзацта осы айтылған."},
+{q:"49. Music helps people improve:",options:["A) reading","B) sleeping","C) memory, listening and concentration","D) painting"],answer:2,kaz:"Соңғы абзацта айтылған."},
 
-{q:"50. The synonym of to ignore:",options:["A) to stay for","B) to look for","C) to vote for","D) to pay no attention to"],answer:3,kaz:"Ignore = назар аудармау."}
+{q:"50. The synonym of ignore:",options:["A) stay for","B) look for","C) vote for","D) pay no attention"],answer:3,kaz:"Ignore = назар аудармау."}
 
 ];
+
+const quiz2=document.getElementById("quiz2");
+
+questions2.forEach((x,i)=>{
+let html=`<div class="question"><b>${x.q}</b><br>`;
+x.options.forEach((o,j)=>{
+html+=`<label><input type="radio" name="q2${i}" value="${j}"> ${o}</label><br>`;
+});
+html+="</div>";
+quiz2.innerHTML+=html;
+});
+
+function checkAnswers2(){
+
+let score=0;
+let res="";
+
+questions2.forEach((x,i)=>{
+
+let sel=document.querySelector(`input[name=q2${i}]:checked`);
+let chosen=sel?x.options[sel.value]:"no answer";
+
+if(sel && sel.value==x.answer){
+score++;
+res+=`<p class="correct">✔ ${x.q}</p>`;
+}else{
+res+=`<p class="wrong">✘ ${x.q}</p>`;
+}
+
+res+=`
+<div class="explanation">
+<b>Correct:</b> ${x.options[x.answer]}<br>
+<b>Your answer:</b> ${chosen}<br>
+👉 ${x.kaz}
+</div>`;
+});
+
+document.getElementById("results2").innerHTML=
+`<h2>Score: ${score}/8</h2>`+res;
+
+document.getElementById("textCard2").classList.add("show");
+}
+   
+<script>
+
+const questions=[
+{q:"35. Popular way of having a green home is using",options:["A) earth","B) sun","C) wind","D) sky"],answer:1,kaz:"Мәтінде solar energy айтылған."},
+{q:"36. There are many volunteers who show their _____",options:["A) difference","B) hatred","C) opinion","D) desire"],answer:3,kaz:"Адамдар Жерді қорғауға үлес қосқысы келеді = тілек, ниет."},
+{q:"37. The quality of green homes depends on",options:["A) cheap","B) new","C) regular","D) long-lasting"],answer:3,kaz:"Үй сапасы ұзаққа шыдайтын материалдарға байланысты."},
+{q:"38. Eco-friendly way of life is",options:["A) not affordable","B) less popular","C) future","D) approved"],answer:3,kaz:"Көп адамдар “green home” идеясына келіседі, қолдайды."},
+{q:"39. Building a regular home is often",options:["A) more expensive","B) much expensive","C) cheaper","D) reasonable"],answer:2,kaz:"Green үй қымбат."},
+{q:"40. Eco homes are",options:["A) not efficient","B) good for Earth","C) cheap","D) homeless"],answer:1,kaz:"Табиғатқа пайдалы."},
+{q:"41. These days people use",options:["A) eco bags","B) paper","C) modern","D) plastic"],answer:0,kaz:"Мәтінде “eco-friendly bags” қолданатыны айтылған."},
+{q:"42. The green movement",options:["A) long ago","B) several","C) decade","D) recent"],answer:0,kaz:"“about 40 years ago” = көп жыл бұрын басталған"}
+];
+
 const quiz=document.getElementById("quiz");
 
 questions.forEach((x,i)=>{
