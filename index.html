@@ -2,15 +2,13 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Reading Task</title>
+<title>Reading Test</title>
 
 <style>
 body{
 margin:0;
-font-family:Arial,sans-serif;
-background-image:url("7B0E287F-F290-41E8-B4EB-ACD98AFFCB92.png");
-background-size:cover;
-background-position:center;
+font-family:Arial;
+background:#111;
 }
 
 .overlay{
@@ -26,9 +24,9 @@ margin:auto;
 
 .card{
 background:white;
-padding:30px;
-border-radius:20px;
-margin-bottom:30px;
+padding:25px;
+border-radius:15px;
+margin-bottom:20px;
 }
 
 h1{
@@ -37,38 +35,37 @@ text-align:center;
 }
 
 .question{
-margin-bottom:25px;
-padding:20px;
 background:#f5f5f5;
-border-left:5px solid #2e7d32;
-border-radius:12px;
+padding:15px;
+border-left:5px solid green;
+margin-bottom:15px;
+border-radius:10px;
 }
 
 button{
-background:#2e7d32;
+background:green;
 color:white;
+padding:12px 25px;
 border:none;
-padding:15px 30px;
-font-size:18px;
 border-radius:10px;
 cursor:pointer;
+font-size:16px;
 }
 
 .correct{color:green;font-weight:bold;}
 .wrong{color:red;font-weight:bold;}
 
 .explanation{
-background:#eef7ee;
-padding:15px;
+background:#eaf7ea;
+padding:10px;
 margin-top:10px;
-border-radius:10px;
+border-radius:8px;
 }
 
 mark{
 background:transparent;
-padding:4px;
-border-radius:6px;
-transition:0.4s;
+padding:3px;
+border-radius:5px;
 }
 
 .show mark{
@@ -77,166 +74,187 @@ background:#fff176;
 
 .label{
 display:none;
-font-size:14px;
 font-weight:bold;
-color:#2e7d32;
+color:green;
 }
 
 .show .label{
 display:inline;
 }
+
+table{
+width:100%;
+border-collapse:collapse;
+margin-top:15px;
+}
+
+td,th{
+border:1px solid #ccc;
+padding:10px;
+}
+
+th{
+background:green;
+color:white;
+}
 </style>
 </head>
 
 <body>
+
 <div class="overlay">
 <div class="container">
 
-<h1>Ағылшын тілі Reading Task Tests</h1>
+<h1>Reading Task Test</h1>
 
 <div class="card" id="textCard">
-<h2>Text 1: Green Homes, Dream Homes</h2>
 
-<p>
-These days, more and more people want to help the Earth. Recycling and using
+<h2>Green Homes, Dream Homes</h2>
+
+<p>These days people want to help Earth. Recycling and using 
 <span class="label">Q41</span><mark>eco-friendly shopping bags</mark>
-are small changes to our daily lives that can bring important benefits.
-</p>
+are important.</p>
 
-<p>
-Many people now choose to do even bigger things for the Earth. Some people choose
-to spend a little more money on their new homes in order to have a green home.
-
+<p>Green movement started many years ago.
 <span class="label">Q42</span><mark>The green movement started about 40 years ago</mark>.
+<span class="label">Q35</span><mark>Using solar energy is a very popular way</mark>.</p>
 
-<span class="label">Q35</span><mark>Using solar energy is a very popular way</mark>
-to have a green home.
-</p>
+<p><span class="label">Q37</span><mark>Materials that last a very long time</mark> are important.</p>
 
-<p>
-Builders think about materials.
+<p><span class="label">Q39</span><mark>Green homes are more expensive than regular homes</mark>.</p>
 
-<span class="label">Q37</span><mark>Green builders also want to use materials that last a very long time</mark>.
-</p>
-
-<p>
-Green homes help people recycle, use less water and minimize energy.
-</p>
-
-<p>
-<span class="label">Q39</span><mark>Although building a green home is often more expensive than a regular home</mark>,
-most owners say it’s a good idea.
-
-This shows eco homes are
-<span class="label">Q40</span><mark>good for the Earth</mark>
-and supported by many people
-<span class="label">Q38</span><mark>more and more people choose this lifestyle</mark>.
-</p>
+<p><span class="label">Q40</span><mark>Eco homes are good for the Earth</mark>.</p>
 
 </div>
 
 <div class="card">
 <div id="quiz"></div>
-<div style="text-align:center;">
-<button onclick="checkAnswers()">Check Results</button>
-</div>
+<button onclick="check()">Check Results</button>
 </div>
 
 <div class="card" id="results"></div>
+
+<!-- LIFEKHACK + SYNONYMS -->
+<div class="card">
+
+<h2>📌 Лайфхаки</h2>
+<ul>
+<li>Сұрақтағы кілт сөзді тап</li>
+<li>Синоним ізде (solar = sun)</li>
+<li>Сан мен жылдарға назар аудар</li>
+<li>Main idea — бүкіл мәтін</li>
+<li>Қарама-қарсы сөздерге мән бер</li>
+</ul>
+
+<h2>📚 Синонимдер</h2>
+
+<table>
+<tr><th>Word</th><th>Synonym</th><th>Қазақша</th></tr>
+<tr><td>Solar</td><td>Sun energy</td><td>Күн энергиясы</td></tr>
+<tr><td>Eco-friendly</td><td>Green</td><td>Экологиялық</td></tr>
+<tr><td>Expensive</td><td>Costly</td><td>Қымбат</td></tr>
+<tr><td>Started</td><td>Began</td><td>Басталды</td></tr>
+<tr><td>Help</td><td>Support</td><td>Көмектесу</td></tr>
+</table>
+
+</div>
 
 </div>
 </div>
 
 <script>
-const questions=[
+
+const q=[
 {
-q:"35. Popular way of having a green home is using",
-options:["A) energy from the earth","B) energy from the sun","C) energy from the wind","D) energy from the sky"],
-answer:1,
-exp:"Solar energy = күн энергиясы. Мәтінде нақты айтылған."
+q:"35. Solar energy is",
+options:["earth","sun","wind","sky"],
+a:1,
+exp:"Мәтінде solar energy = күн энергиясы"
 },
 {
-q:"36. There are many volunteers who show their _____",
-options:["A) difference","B) hatred","C) opinion","D) desire"],
-answer:3,
-exp:"People want to help Earth. Бұл тілек дегенді білдіреді."
+q:"36. Desire means",
+options:["hate","difference","opinion","wish"],
+a:3,
+exp:"Desire = тілек, адам қалауы"
 },
 {
-q:"37. Quality depends on",
-options:["A) cheap","B) up-to-date","C) regular","D) long-lasting"],
-answer:3,
-exp:"Long-lasting = ұзаққа шыдайтын материал."
+q:"37. Green homes depend on",
+options:["cheap","modern","regular","long-lasting"],
+a:3,
+exp:"Мәтінде long-lasting materials айтылған"
 },
 {
-q:"38. Eco-friendly way is",
-options:["A) not affordable","B) less popular","C) future plan","D) approved by majority"],
-answer:3,
-exp:"More and more people choose it."
+q:"38. Eco lifestyle is",
+options:["not popular","less","future","supported"],
+a:3,
+exp:"More and more people → көпшілік қолдайды"
 },
 {
-q:"39. Regular home is often",
-options:["A) more expensive","B) much more expensive","C) cheaper","D) more reasonable"],
-answer:2,
-exp:"Green home қымбат → regular арзанырақ."
+q:"39. Regular home is",
+options:["expensive","more expensive","cheaper","equal"],
+a:2,
+exp:"Green home қымбат, демек regular — арзан"
 },
 {
-q:"40. Eco houses are",
-options:["A) not efficient","B) good for Earth","C) cheap","D) homeless"],
-answer:1,
-exp:"Негізгі идея — Earth protection."
+q:"40. Eco homes are",
+options:["bad","good","cheap","random"],
+a:1,
+exp:"Мәтін негізгі идеясы — Earth protection"
 },
 {
 q:"41. People use",
-options:["A) eco-friendly shopping bags","B) paper","C) modern","D) plastic"],
-answer:0,
-exp:"Бірінші абзацта тікелей берілген."
+options:["eco bags","plastic","paper","modern"],
+a:0,
+exp:"Бірінші абзацта айтылған"
 },
 {
 q:"42. Green movement",
-options:["A) started many years ago","B) several years ago","C) decade","D) recent"],
-answer:0,
-exp:"40 years ago = көп жыл бұрын."
+options:["40 years ago","recent","10 years","never"],
+a:0,
+exp:"about 40 years ago"
 }
 ];
 
 const quiz=document.getElementById("quiz");
 
-questions.forEach((item,index)=>{
-let html=`<div class="question"><p><strong>${item.q}</strong></p>`;
-item.options.forEach((opt,i)=>{
-html+=`<label><input type="radio" name="q${index}" value="${i}"> ${opt}</label><br><br>`;
+q.forEach((x,i)=>{
+let html=`<div class="question"><b>${x.q}</b><br>`;
+x.options.forEach((o,j)=>{
+html+=`<label><input type="radio" name="q${i}" value="${j}"> ${o}</label><br>`;
 });
 html+="</div>";
 quiz.innerHTML+=html;
 });
 
-function checkAnswers(){
+function check(){
 let score=0;
-let output=`<h2>Your Score: </h2>`;
+let res="";
 
-questions.forEach((item,index)=>{
-const selected=document.querySelector(`input[name=q${index}]:checked`);
-let chosen=selected?item.options[selected.value]:"Жауап таңдалмады";
+q.forEach((x,i)=>{
+let sel=document.querySelector(`input[name=q${i}]:checked`);
+let chosen=sel?x.options[sel.value]:"no answer";
 
-if(selected && parseInt(selected.value)===item.answer){
+if(sel && sel.value==x.a){
 score++;
-output+=`<p class="correct">✔ ${item.q}</p>`;
+res+=`<p class="correct">✔ ${x.q}</p>`;
 }else{
-output+=`<p class="wrong">✘ ${item.q}</p>`;
+res+=`<p class="wrong">✘ ${x.q}</p>`;
 }
 
-output+=`
+res+=`
 <div class="explanation">
 Сенің жауабың: ${chosen}<br>
-Дұрыс жауап: <strong>${item.options[item.answer]}</strong><br>
-Түсіндірме: ${item.exp}<br>
-Мәтіндегі дәлелі: Q${35+index} белгісін қара
-</div><br>`;
+Дұрыс жауап: <b>${x.options[x.a]}</b><br>
+Түсіндірме: ${x.exp}<br>
+</div>`;
 });
 
-document.getElementById("results").innerHTML=`<h1>${score}/8</h1>`+output;
+document.getElementById("results").innerHTML=
+`<h2>Score: ${score}/8</h2>`+res;
+
 document.getElementById("textCard").classList.add("show");
 }
+
 </script>
 
 </body>
