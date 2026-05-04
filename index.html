@@ -1,47 +1,86 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Quiz Site</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Reading Task 1</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+
+      /* 🎯 ФОН КАРТИНКА */
+      background-image: url("https://images.unsplash.com/photo-1524995997946-a1c2e315a42f");
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+
+    /* затемнение фона */
+    .overlay {
+      background: rgba(0,0,0,0.6);
+      min-height: 100vh;
+      padding: 40px;
+    }
+
+    /* главный блок */
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    .task {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #444;
+    }
+
+    p {
+      line-height: 1.6;
+      font-size: 16px;
+      color: #222;
+    }
+  </style>
 </head>
+
 <body>
 
-<h1>Reading Quiz</h1>
+<div class="overlay">
 
-<p id="text">
-Music improves memory, listening and concentration.
-</p>
+  <div class="container">
 
-<h3>Question:</h3>
-<p>What does music improve?</p>
+    <div class="task">Reading Task 1</div>
 
-<button onclick="check(true)">memory, listening and concentration</button>
-<button onclick="check(false)">only dancing</button>
-<button onclick="check(false)">only writing</button>
-<button onclick="check(false)">only speaking</button>
+    <h1>A Musical Boost</h1>
 
-<p id="result"></p>
+    <p>
+      Is there a connection between music and language? According to recent studies,
+      the answer is yes: music boosts certain language abilities in the brain.
+    </p>
 
-<script src="script.js"></script>
+    <p>
+      A recent study shows that playing a musical instrument can improve hearing ability.
+      Musicians are able to focus on certain sounds even in noisy environments.
+    </p>
+
+    <p>
+      Music also helps patients with speech problems. Singing words can activate parts of
+      the brain and help recovery.
+    </p>
+
+  </div>
+
+</div>
+
 </body>
 </html>
-body {
-  font-family: Arial;
-  margin: 20px;
-}
-
-button {
-  display: block;
-  margin: 8px 0;
-  padding: 10px;
-}
- function check(isCorrect) {
-  const result = document.getElementById("result");
-
-  if (isCorrect) {
-    result.innerHTML = "✅ Correct!<br>🇰🇿 Дұрыс! Музыка есте сақтау, тыңдау және концентрацияны жақсартады.";
-  } else {
-    result.innerHTML = "❌ Incorrect.<br>🇰🇿 Дұрыс жауап: memory, listening and concentration.";
-  }
-}
