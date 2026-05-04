@@ -8,37 +8,67 @@
   body {
     margin: 0;
     font-family: Arial, sans-serif;
-
-    /* 🎯 твоя картинка */
     background-image: url("7B0E287F-F290-41E8-B4EB-ACD98AFFCB92.png");
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    min-height: 100vh;
   }
 
-  /* затемнение */
   .overlay {
-    background: rgba(0,0,0,0.6);
-    height: 100vh;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background: rgba(0,0,0,0.65);
+    min-height: 100vh;
+    padding: 50px 0;
   }
 
-  /* заголовок */
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 40px;
+  }
+
   h1 {
     color: white;
     font-size: 42px;
     text-align: center;
-
     padding: 20px 40px;
     border: 2px solid white;
     border-radius: 12px;
-
     background: rgba(255,255,255,0.1);
-
     backdrop-filter: blur(6px);
+  }
+
+  .reading-card {
+    width: 80%;
+    max-width: 900px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 18px;
+    padding: 35px;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.35);
+    backdrop-filter: blur(8px);
+    color: #222;
+    line-height: 1.8;
+    font-size: 18px;
+  }
+
+  .reading-card h2 {
+    text-align: center;
+    color: #1b5e20;
+    margin-bottom: 10px;
+    font-size: 28px;
+  }
+
+  .reading-card h3 {
+    text-align: center;
+    color: #2e7d32;
+    margin-bottom: 25px;
+    font-size: 24px;
+  }
+
+  .reading-card p {
+    margin-bottom: 18px;
+    text-align: justify;
   }
 </style>
 </head>
@@ -46,10 +76,59 @@
 <body>
 
 <div class="overlay">
-  <h1>
-    Ағылшын тілі<br>
-    Reading Task Tests
-  </h1>
+  <div class="container">
+
+    <h1>
+      Ағылшын тілі<br>
+      Reading Task Tests
+    </h1>
+
+    <div class="reading-card">
+      <h2>Text 1</h2>
+      <h3>Green Homes, Dream Homes</h3>
+
+      <p>
+        These days, more and more people want to help the Earth. Recycling and using
+        eco-friendly shopping bags are small changes to our daily lives that can bring
+        important benefits to the Earth.
+      </p>
+
+      <p>
+        Many people now choose to do even bigger things for the Earth. Some people
+        choose to spend a little more money on their new homes in order to have a
+        "green" home. The green movement started about 40 years ago, and it is very
+        big now. Using solar energy is a very popular way to have a "green" home.
+      </p>
+
+      <p>
+        Builders of green homes think about many different ways to make a building
+        more eco-friendly. Building materials are one of the biggest decisions. The
+        United States uses 40 percent of all its raw materials on new buildings. Green
+        builders also want to use materials that last a very long time.
+      </p>
+
+      <p>
+        Of course, location is also an important part of eco-construction. Homes need
+        to be close to the things people need for their daily lives, or to public
+        transportation. Homes also need to be in a place that doesn’t hurt the
+        environment around them.
+      </p>
+
+      <p>
+        Green homes are designed to help the people living in them recycle things, use
+        less water, and minimize energy use easily.
+      </p>
+
+      <p>
+        Although building a green home is often more expensive than a regular home,
+        most owners say it’s a good idea. Most say that they are happy because their
+        homes are more environmentally friendly, safer, cleaner, and better homes for
+        their families.
+      </p>
+
+    </div>
+
+  </div>
 </div>
 
 </body>
