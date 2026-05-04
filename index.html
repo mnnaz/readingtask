@@ -26,3 +26,22 @@ Music improves memory, listening and concentration.
 <script src="script.js"></script>
 </body>
 </html>
+body {
+  font-family: Arial;
+  margin: 20px;
+}
+
+button {
+  display: block;
+  margin: 8px 0;
+  padding: 10px;
+}
+ function check(isCorrect) {
+  const result = document.getElementById("result");
+
+  if (isCorrect) {
+    result.innerHTML = "✅ Correct!<br>🇰🇿 Дұрыс! Музыка есте сақтау, тыңдау және концентрацияны жақсартады.";
+  } else {
+    result.innerHTML = "❌ Incorrect.<br>🇰🇿 Дұрыс жауап: memory, listening and concentration.";
+  }
+}
