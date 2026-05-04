@@ -7,14 +7,17 @@
 <style>
 body{
 margin:0;
-font-family:Arial;
-background:#111;
+font-family:Arial,sans-serif;
+background-image:url("7B0E287F-F290-41E8-B4EB-ACD98AFFCB92.png");
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
 }
 
 .overlay{
-background:rgba(0,0,0,0.7);
+background:rgba(0,0,0,0.75);
 min-height:100vh;
-padding:30px;
+padding:40px;
 }
 
 .container{
@@ -60,44 +63,6 @@ padding:10px;
 margin-top:10px;
 border-radius:8px;
 }
-
-/* TEXT HIGHLIGHT */
-mark{
-background:transparent;
-padding:3px;
-border-radius:5px;
-transition:0.4s;
-}
-
-.show mark{
-color:black;
-}
-
-.show .q35{background:#fff176;}
-.show .q36{background:#a5d6a7;}
-.show .q37{background:#90caf9;}
-.show .q38{background:#ffcc80;}
-.show .q39{background:#ce93d8;}
-.show .q40{background:#f48fb1;}
-.show .q41{background:#ffe082;}
-.show .q42{background:#80cbc4;}
-
-/* TABLE */
-table{
-width:100%;
-border-collapse:collapse;
-margin-top:15px;
-}
-
-td,th{
-border:1px solid #ccc;
-padding:10px;
-}
-
-th{
-background:#2e7d32;
-color:white;
-}
 </style>
 </head>
 
@@ -106,77 +71,68 @@ color:white;
 <div class="overlay">
 <div class="container">
 
-<h1>Reading Task Test</h1>
+<h1>Reading Task</h1>
 
-<!-- TEXT -->
-<div class="card" id="textCard">
+<!-- ================= TEXT (100% ORIGINAL) ================= -->
+<div class="card">
 
-<h2>Green Homes, Dream Homes</h2>
+<pre style="white-space:pre-wrap;font-family:Arial;">
 
-<p>
+Text 1
+Green Homes, Dream Homes
 These days, more and more people want to help the Earth. Recycling and using
-<mark class="q41">eco-friendly shopping bags</mark>
-are small changes to our daily lives that can bring important benefits to the Earth.
-</p>
+eco-friendly shopping bags are small changes to our daily lives that can bring
+important benefits to the Earth.
+Many people now choose to do even bigger things for the Earth. Some people
+choose to spend a little more money on their new homes in order to have a „green‟
+home. The green movement started about 40 years ago, and it is very big now.
+Using solar energy is a very popular way to have a „green‟ home.
+Builders of green homes think about many different ways to make a building
+more eco-friendly. Building materials are one of the biggest decisions. The United
+States uses 40 percent of all its raw materials on new buildings. Green builders also
+want to use materials that last a very long time.
+Of course, location is also an important part of eco-construction. Homes need to
+be close to the things people need for their daily lives, or to public transportation.
+Homes also need to be in a place that doesn‟t hurt the environment around them.
+Green homes are designed to help the people living in them to recycle things, use
+less water, and minimize energy use easily.
+Although building a green home is often more expensive than a regular home,
+most owners say it‟s a good idea. Most say that they are happy because their
+homes are more environmentally friendly, safer, cleaner, and better homes for their
+families.
 
-<p>
-Many people now choose to do even bigger things for the Earth. Some people choose to spend a little more money on their new homes in order to have a green home. The green movement started about 40 years ago, and it is very big now.
-<mark class="q42">The green movement started about 40 years ago</mark>.
-Using solar energy is a very popular way to have a green home.
-<mark class="q35">Using solar energy is a very popular way</mark>.
-</p>
-
-<p>
-Builders of green homes think about many different ways to make a building more eco-friendly. Building materials are one of the biggest decisions. Green builders also want to use
-<mark class="q37">materials that last a very long time</mark>.
-</p>
-
-<p>
-<mark class="q39">Building a regular home is often more expensive than building a green home</mark>.
-</p>
-
-<p>
-If people build eco-friendly houses,
-<mark class="q40">it is good for the Earth</mark>.
-More and more people support this lifestyle
-<mark class="q38">approved by the majority</mark>.
-</p>
+</pre>
 
 </div>
 
-<!-- QUIZ -->
+<!-- ================= QUIZ ================= -->
 <div class="card">
 <div id="quiz"></div>
 <button onclick="checkAnswers()">Check Results</button>
 </div>
 
-<!-- RESULTS -->
+<!-- ================= RESULTS ================= -->
 <div class="card" id="results"></div>
 
-<!-- LIFEKHACKS + SYNONYMS -->
+<!-- ================= LIFEKHACKS ================= -->
 <div class="card">
-
 <h2>📌 Лайфхаки</h2>
 <ul>
-<li>Кілт сөзді тап</li>
-<li>Синонимді ізде</li>
-<li>Сан, жылдарға назар аудар</li>
-<li>Толық оқымай scan жаса</li>
-<li>Main idea = жалпы ой</li>
+<li>Ищи синоним, не точное слово</li>
+<li>Читай первый и последний абзац</li>
+<li>Смотри числа (40%, 40 years)</li>
+<li>Не спеши выбирать первый вариант</li>
 </ul>
 
-<h2>📚 Синонимдер</h2>
-
-<table>
-<tr><th>Word</th><th>Synonym</th><th>Қазақша</th></tr>
-<tr><td>Solar</td><td>Sun energy</td><td>Күн энергиясы</td></tr>
-<tr><td>Eco-friendly</td><td>Green</td><td>Экологиялық</td></tr>
-<tr><td>Expensive</td><td>Costly</td><td>Қымбат</td></tr>
-<tr><td>Started</td><td>Began</td><td>Басталды</td></tr>
-<tr><td>Help</td><td>Support</td><td>Көмектесу</td></tr>
-<tr><td>Popular</td><td>Common</td><td>Танымал</td></tr>
-</table>
-
+<h2>📚 Синонимы</h2>
+<ul>
+<li>Eco-friendly = Green</li>
+<li>Help = Support</li>
+<li>Expensive = Costly</li>
+<li>Start = Begin</li>
+<li>Use = Consume</li>
+<li>Popular = Common</li>
+</ul>
 </div>
 
 </div>
@@ -186,51 +142,51 @@ More and more people support this lifestyle
 
 const questions=[
 {
-q:"35. Solar energy is",
-options:["earth","sun","wind","sky"],
-a:1,
-exp:"Solar = күн энергиясы"
+q:"35. Popular way of having a green home is using",
+options:["A) energy from the earth","B) energy from the sun","C) energy from the wind","D) energy from the sky"],
+answer:1,
+exp:"Solar energy = sun energy"
 },
 {
-q:"36. Desire means",
-options:["hate","difference","opinion","wish"],
-a:3,
-exp:"Desire = тілек"
+q:"36. There are many volunteers who show their _____ to make a contribution to the Earth‟s protection.",
+options:["A) difference","B) hatred","C) opinion","D) desire"],
+answer:3,
+exp:"Desire = wish / intention"
 },
 {
-q:"37. Quality depends on",
-options:["cheap","modern","regular","long-lasting"],
-a:3,
-exp:"Long-lasting materials"
+q:"37. The quality of green homes depends on",
+options:["A) cheap raw materials","B) up-to-date building materials","C) regular building materials","D) long-lasting building materials"],
+answer:3,
+exp:"Text says materials that last long"
 },
 {
-q:"38. Eco lifestyle is",
-options:["not popular","less","future","supported"],
-a:3,
+q:"38. According to the text, eco-friendly way of life is",
+options:["A) not affordable","B) less popular","C) future plan","D) approved by majority"],
+answer:3,
 exp:"Most people support it"
 },
 {
-q:"39. Regular home is",
-options:["expensive","more expensive","cheaper","equal"],
-a:2,
+q:"39. Building a regular home is often",
+options:["A) more expensive","B) much more expensive","C) cheaper","D) more reasonable"],
+answer:2,
 exp:"Green home is more expensive"
 },
 {
-q:"40. Eco homes are",
-options:["bad","good","cheap","random"],
-a:1,
+q:"40. If people need to build eco-friendly houses",
+options:["A) not efficient","B) good for Earth","C) cheap","D) for homeless"],
+answer:1,
 exp:"Main idea = Earth protection"
 },
 {
-q:"41. People use",
-options:["eco bags","plastic","paper","modern"],
-a:0,
-exp:"Direct text"
+q:"41. These days people use",
+options:["A) eco-friendly shopping bags a lot","B) paper shopping bags a lot","C) modern shopping bags a lot","D) plastic shopping bags a lot"],
+answer:0,
+exp:"Direct from text"
 },
 {
-q:"42. Green movement",
-options:["40 years ago","recent","10 years","never"],
-a:0,
+q:"42. The green movement",
+options:["A) started many years ago","B) started several years ago","C) has lasted for a decade","D) has started recently"],
+answer:0,
 exp:"About 40 years ago"
 }
 ];
@@ -256,7 +212,7 @@ questions.forEach((x,i)=>{
 let sel=document.querySelector(`input[name=q${i}]:checked`);
 let chosen=sel?x.options[sel.value]:"no answer";
 
-if(sel && sel.value==x.a){
+if(sel && sel.value==x.answer){
 score++;
 res+=`<p class="correct">✔ ${x.q}</p>`;
 }else{
@@ -265,17 +221,14 @@ res+=`<p class="wrong">✘ ${x.q}</p>`;
 
 res+=`
 <div class="explanation">
-Сенің жауабың: ${chosen}<br>
-Дұрыс жауап: <b>${x.options[x.a]}</b><br>
-Түсіндірме: ${x.exp}<br>
+Your answer: ${chosen}<br>
+Correct: ${x.options[x.answer]}<br>
+Explanation: ${x.exp}
 </div>`;
 });
 
 document.getElementById("results").innerHTML=
 `<h2>Score: ${score}/8</h2>`+res;
-
-/* SHOW HIGHLIGHT */
-document.getElementById("textCard").classList.add("show");
 
 }
 
