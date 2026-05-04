@@ -28,41 +28,54 @@ margin:auto;
 h1{
 color:white;
 text-align:center;
-margin-bottom:20px;
 }
 
-/* CARDS */
+/* CARD */
 .card{
 background:white;
 padding:25px;
 border-radius:15px;
 margin-bottom:20px;
-box-shadow:0 10px 25px rgba(0,0,0,0.2);
 }
 
-/* TEXT */
+/* TEXT STYLE */
 .text p{
 line-height:1.6;
 font-size:16px;
 }
 
+/* hidden tags before result */
 .tag{
-display:inline-block;
-background:#2e7d32;
-color:white;
-font-size:12px;
-padding:3px 8px;
-border-radius:6px;
+display:none;
+font-weight:bold;
+font-size:13px;
 margin-right:6px;
+padding:3px 7px;
+border-radius:6px;
 }
+
+/* SHOW AFTER FINISH */
+.show .tag{
+display:inline-block;
+}
+
+/* different highlight colors */
+.q35{background:#fff176;}
+.q36{background:#a5d6a7;}
+.q37{background:#90caf9;}
+.q38{background:#ffcc80;}
+.q39{background:#ce93d8;}
+.q40{background:#f48fb1;}
+.q41{background:#ffe082;}
+.q42{background:#80cbc4;}
 
 /* QUESTIONS */
 .question{
 background:#f5f5f5;
 padding:15px;
 border-left:5px solid #2e7d32;
-border-radius:10px;
 margin-bottom:15px;
+border-radius:10px;
 }
 
 button{
@@ -75,7 +88,6 @@ cursor:pointer;
 font-size:16px;
 }
 
-/* RESULT */
 .correct{color:green;font-weight:bold;}
 .wrong{color:red;font-weight:bold;}
 
@@ -86,16 +98,7 @@ margin-top:8px;
 border-radius:8px;
 }
 
-/* HIGHLIGHT COLORS */
-.show .q35{background:#fff176;}
-.show .q36{background:#a5d6a7;}
-.show .q37{background:#90caf9;}
-.show .q38{background:#ffcc80;}
-.show .q39{background:#ce93d8;}
-.show .q40{background:#f48fb1;}
-.show .q41{background:#ffe082;}
-.show .q42{background:#80cbc4;}
-
+/* TABLE */
 table{
 width:100%;
 border-collapse:collapse;
@@ -120,7 +123,7 @@ color:white;
 
 <h1>Reading Task Test</h1>
 
-<!-- ================= TEXT (FULL ORIGINAL + TAGS ONLY) ================= -->
+<!-- ================= TEXT (100% ORIGINAL) ================= -->
 <div class="card text" id="textCard">
 
 <h2>Green Homes, Dream Homes</h2>
@@ -130,15 +133,17 @@ These days, more and more people want to help the Earth. Recycling and using eco
 </p>
 
 <p>
-Many people now choose to do even bigger things for the Earth. Some people choose to spend a little more money on their new homes in order to have a „green‟ home.
-<span class="tag q42">Q42</span>The green movement started about 40 years ago, and it is very big now.
-<span class="tag q35">Q35</span>Using solar energy is a very popular way to have a „green‟ home.
+Many people now choose to do even bigger things for the Earth. Some people choose to spend a little more money on their new homes in order to have a „green‟ home. 
+<span class="tag q42">Q42 → started 40 years ago</span>
+The green movement started about 40 years ago, and it is very big now. 
+<span class="tag q35">Q35 → solar energy</span>
+Using solar energy is a very popular way to have a „green‟ home.
 </p>
 
 <p>
-Builders of green homes think about many different ways to make a building more eco-friendly. Building materials are one of the biggest decisions.
-<span class="tag q37">Q37</span>The United States uses 40 percent of all its raw materials on new buildings.
-Green builders also want to use materials that last a very long time.
+Builders of green homes think about many different ways to make a building more eco-friendly. Building materials are one of the biggest decisions. 
+<span class="tag q37">Q37 → long-lasting materials</span>
+The United States uses 40 percent of all its raw materials on new buildings. Green builders also want to use materials that last a very long time.
 </p>
 
 <p>
@@ -150,9 +155,8 @@ Green homes are designed to help the people living in them to recycle things, us
 </p>
 
 <p>
-<span class="tag q39">Q39</span>Although building a green home is often more expensive than a regular home,
-most owners say it’s a good idea.
-Most say that they are happy because their homes are more environmentally friendly, safer, cleaner, and better homes for their families.
+<span class="tag q39">Q39 → cheaper than green homes</span>
+Although building a green home is often more expensive than a regular home, most owners say it’s a good idea. Most say that they are happy because their homes are more environmentally friendly, safer, cleaner, and better homes for their families.
 </p>
 
 </div>
@@ -171,23 +175,20 @@ Most say that they are happy because their homes are more environmentally friend
 
 <h2>📌 Лайфхаки</h2>
 <ul>
-<li>Ищи ключевые слова (solar, green, expensive)</li>
-<li>Синоним = правильный ответ</li>
-<li>Числа (40%, 40 years) всегда важны</li>
-<li>Первый и последний абзац = главная идея</li>
-<li>Не выбирай ответ без проверки текста</li>
+<li>Ищи перефраз (solar = sun energy)</li>
+<li>Ответ почти всегда в том же абзаце</li>
+<li>Числа = сильный ориентир</li>
+<li>Не доверяй первому варианту</li>
 </ul>
 
 <h2>📚 Синонимы</h2>
-
 <table>
 <tr><th>Word</th><th>Synonym</th><th>Қазақша</th></tr>
 <tr><td>Eco-friendly</td><td>Green</td><td>Экологиялық</td></tr>
-<tr><td>Help</td><td>Support</td><td>Көмектесу</td></tr>
+<tr><td>Help</td><td>Support</td><td>Көмек</td></tr>
 <tr><td>Expensive</td><td>Costly</td><td>Қымбат</td></tr>
 <tr><td>Start</td><td>Begin</td><td>Бастау</td></tr>
 <tr><td>Use</td><td>Consume</td><td>Пайдалану</td></tr>
-<tr><td>Popular</td><td>Common</td><td>Танымал</td></tr>
 </table>
 
 </div>
@@ -202,17 +203,17 @@ const questions=[
 q:"35. Popular way of having a green home is using",
 options:["A) energy from the earth","B) energy from the sun","C) energy from the wind","D) energy from the sky"],
 answer:1,
-exp:"Solar energy = күн энергиясы"
+exp:"Solar energy = sun energy"
 },
 {
-q:"36. There are many volunteers who show their _____ to make a contribution to the Earth‟s protection.",
+q:"36. There are many volunteers who show their _____",
 options:["A) difference","B) hatred","C) opinion","D) desire"],
 answer:3,
-exp:"Desire = тілек"
+exp:"Desire = wish"
 },
 {
 q:"37. The quality of green homes depends on",
-options:["A) cheap raw materials","B) up-to-date building materials","C) regular building materials","D) long-lasting building materials"],
+options:["A) cheap raw materials","B) up-to-date materials","C) regular materials","D) long-lasting materials"],
 answer:3,
 exp:"Text says long-lasting materials"
 },
@@ -287,7 +288,7 @@ Explanation: ${x.exp}
 document.getElementById("results").innerHTML=
 `<h2>Score: ${score}/8</h2>`+res;
 
-/* SHOW HIGHLIGHT */
+/* SHOW REAL TEXT ANSWERS */
 document.getElementById("textCard").classList.add("show");
 
 }
