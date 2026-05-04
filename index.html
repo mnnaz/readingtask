@@ -30,6 +30,7 @@ color:white;
 text-align:center;
 }
 
+/* CARD */
 .card{
 background:white;
 padding:25px;
@@ -37,24 +38,28 @@ border-radius:15px;
 margin-bottom:20px;
 }
 
+/* TEXT STYLE */
 .text p{
 line-height:1.6;
 font-size:16px;
 }
 
-/* HIGHLIGHT SYSTEM */
+/* hidden tags before result */
 .tag{
 display:none;
 font-weight:bold;
+font-size:13px;
+margin-right:6px;
 padding:3px 7px;
 border-radius:6px;
-margin-right:6px;
 }
 
+/* SHOW AFTER FINISH */
 .show .tag{
 display:inline-block;
 }
 
+/* different highlight colors */
 .q35{background:#fff176;}
 .q36{background:#a5d6a7;}
 .q37{background:#90caf9;}
@@ -76,8 +81,8 @@ border-radius:10px;
 button{
 background:#2e7d32;
 color:white;
-padding:12px 25px;
 border:none;
+padding:12px 25px;
 border-radius:10px;
 cursor:pointer;
 font-size:16px;
@@ -91,13 +96,6 @@ background:#eaf7ea;
 padding:10px;
 margin-top:8px;
 border-radius:8px;
-font-size:14px;
-}
-
-.kz{
-color:#2e7d32;
-font-style:italic;
-margin-top:5px;
 }
 
 /* TABLE */
@@ -125,7 +123,7 @@ color:white;
 
 <h1>Reading Task Test</h1>
 
-<!-- ================= TEXT (FULL ORIGINAL) ================= -->
+<!-- ================= TEXT (100% ORIGINAL) ================= -->
 <div class="card text" id="textCard">
 
 <h2>Green Homes, Dream Homes</h2>
@@ -136,35 +134,34 @@ These days, more and more people want to help the Earth. Recycling and using eco
 
 <p>
 Many people now choose to do even bigger things for the Earth. Some people choose to spend a little more money on their new homes in order to have a „green‟ home. 
-<span class="tag q42">Q42</span>
+<span class="tag q42">Q42 → started 40 years ago</span>
 The green movement started about 40 years ago, and it is very big now. 
-<span class="tag q35">Q35</span>
+<span class="tag q35">Q35 → solar energy</span>
 Using solar energy is a very popular way to have a „green‟ home.
 </p>
 
 <p>
 Builders of green homes think about many different ways to make a building more eco-friendly. Building materials are one of the biggest decisions. 
-<span class="tag q37">Q37</span>
+<span class="tag q37">Q37 → long-lasting materials</span>
 The United States uses 40 percent of all its raw materials on new buildings. Green builders also want to use materials that last a very long time.
 </p>
 
 <p>
-Of course, location is also an important part of eco-construction.
+Of course, location is also an important part of eco-construction. Homes need to be close to the things people need for their daily lives, or to public transportation. Homes also need to be in a place that doesn’t hurt the environment around them.
 </p>
 
 <p>
 Green homes are designed to help the people living in them to recycle things, use less water, and minimize energy use easily.
-<span class="tag q40">Q40</span>
 </p>
 
 <p>
-<span class="tag q39">Q39</span>
-Although building a green home is often more expensive than a regular home, most owners say it’s a good idea.
+<span class="tag q39">Q39 → cheaper than green homes</span>
+Although building a green home is often more expensive than a regular home, most owners say it’s a good idea. Most say that they are happy because their homes are more environmentally friendly, safer, cleaner, and better homes for their families.
 </p>
 
 </div>
 
-<!-- ================= QUIZ ================= -->
+<!-- ================= QUESTIONS ================= -->
 <div class="card">
 <div id="quiz"></div>
 <button onclick="checkAnswers()">Check Results</button>
@@ -178,20 +175,21 @@ Although building a green home is often more expensive than a regular home, most
 
 <h2>📌 Лайфхаки</h2>
 <ul>
-<li>Ищи синонимы (solar = sun energy)</li>
-<li>40 years ago = всегда дата</li>
-<li>Green = eco-friendly</li>
-<li>Ответ часто в том же абзаце</li>
+<li>Ищи перефраз (solar = sun energy)</li>
+<li>Ответ почти всегда в том же абзаце</li>
+<li>Числа = сильный ориентир</li>
+<li>Не доверяй первому варианту</li>
 </ul>
 
 <h2>📚 Синонимы</h2>
-<ul>
-<li>Eco-friendly = Green</li>
-<li>Help = Support</li>
-<li>Expensive = Costly</li>
-<li>Use = Consume</li>
-<li>Desire = Wish / Want</li>
-</ul>
+<table>
+<tr><th>Word</th><th>Synonym</th><th>Қазақша</th></tr>
+<tr><td>Eco-friendly</td><td>Green</td><td>Экологиялық</td></tr>
+<tr><td>Help</td><td>Support</td><td>Көмек</td></tr>
+<tr><td>Expensive</td><td>Costly</td><td>Қымбат</td></tr>
+<tr><td>Start</td><td>Begin</td><td>Бастау</td></tr>
+<tr><td>Use</td><td>Consume</td><td>Пайдалану</td></tr>
+</table>
 
 </div>
 
@@ -203,59 +201,51 @@ Although building a green home is often more expensive than a regular home, most
 const questions=[
 {
 q:"35. Popular way of having a green home is using",
-options:["A) earth energy","B) sun energy","C) wind energy","D) sky energy"],
+options:["A) energy from the earth","B) energy from the sun","C) energy from the wind","D) energy from the sky"],
 answer:1,
-exp:"Solar energy = sun energy",
-kz:"Күн энергиясы мәтінде нақты айтылған."
+exp:"Solar energy = sun energy"
 },
 {
 q:"36. There are many volunteers who show their _____",
 options:["A) difference","B) hatred","C) opinion","D) desire"],
 answer:3,
-exp:"Desire = wish / want",
-kz:"Адамдар Жерге көмектескісі келеді → тілек."
+exp:"Desire = wish"
 },
 {
-q:"37. Quality depends on",
-options:["A) cheap","B) modern","C) regular","D) long-lasting"],
+q:"37. The quality of green homes depends on",
+options:["A) cheap raw materials","B) up-to-date materials","C) regular materials","D) long-lasting materials"],
 answer:3,
-exp:"Long-lasting materials",
-kz:"Мәтінде ұзаққа шыдайтын материалдар бар."
+exp:"Text says long-lasting materials"
 },
 {
-q:"38. Eco-friendly life is",
+q:"38. Eco-friendly way of life is",
 options:["A) not affordable","B) less popular","C) future plan","D) approved by majority"],
 answer:3,
-exp:"Most people support it",
-kz:"Көп адамдар қолдайды."
+exp:"Most people support it"
 },
 {
-q:"39. Regular home is",
+q:"39. Building a regular home is often",
 options:["A) more expensive","B) much more expensive","C) cheaper","D) more reasonable"],
 answer:2,
-exp:"Green home more expensive",
-kz:"Кәдімгі үй арзанырақ."
+exp:"Green home is more expensive"
 },
 {
 q:"40. Eco homes are",
-options:["A) not good","B) good for Earth","C) cheap","D) for homeless"],
+options:["A) not efficient","B) good for Earth","C) cheap","D) homeless"],
 answer:1,
-exp:"They protect environment",
-kz:"Негізгі идея — табиғатты қорғау."
+exp:"Main idea = environment protection"
 },
 {
-q:"41. People use",
-options:["A) eco bags","B) paper bags","C) modern bags","D) plastic bags"],
+q:"41. These days people use",
+options:["A) eco-friendly shopping bags","B) paper bags","C) modern bags","D) plastic bags"],
 answer:0,
-exp:"Eco-friendly shopping bags",
-kz:"Мәтінде eco bags айтылған."
+exp:"Direct from text"
 },
 {
-q:"42. Green movement",
-options:["A) long ago","B) recently","C) decade","D) few years ago"],
+q:"42. The green movement",
+options:["A) started many years ago","B) several years ago","C) decade","D) recently"],
 answer:0,
-exp:"Started about 40 years ago",
-kz:"40 жыл бұрын басталған."
+exp:"About 40 years ago"
 }
 ];
 
@@ -292,14 +282,13 @@ res+=`
 Your answer: ${chosen}<br>
 Correct: ${x.options[x.answer]}<br>
 Explanation: ${x.exp}
-<div class="kz">${x.kz}</div>
 </div>`;
 });
 
 document.getElementById("results").innerHTML=
 `<h2>Score: ${score}/8</h2>`+res;
 
-/* SHOW ALL HIGHLIGHTS */
+/* SHOW REAL TEXT ANSWERS */
 document.getElementById("textCard").classList.add("show");
 
 }
