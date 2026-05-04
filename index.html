@@ -25,7 +25,10 @@ max-width:1100px;
 margin:auto;
 }
 
-h1{color:white;text-align:center;}
+h1{
+color:white;
+text-align:center;
+}
 
 .card{
 background:white;
@@ -34,6 +37,37 @@ border-radius:15px;
 margin-bottom:20px;
 }
 
+/* TEXT */
+.text p{
+line-height:1.6;
+font-size:16px;
+}
+
+/* TAGS */
+.tag{
+display:none;
+font-weight:bold;
+font-size:13px;
+margin-right:6px;
+padding:3px 7px;
+border-radius:6px;
+}
+
+.show .tag{
+display:inline-block;
+}
+
+/* COLORS */
+.q35{background:#fff176;}
+.q36{background:#a5d6a7;}
+.q37{background:#90caf9;}
+.q38{background:#ffcc80;}
+.q39{background:#ce93d8;}
+.q40{background:#f48fb1;}
+.q41{background:#ffe082;}
+.q42{background:#80cbc4;}
+
+/* QUESTIONS */
 .question{
 background:#f5f5f5;
 padding:15px;
@@ -72,7 +106,10 @@ border:1px solid #ccc;
 padding:10px;
 }
 
-th{background:#2e7d32;color:white;}
+th{
+background:#2e7d32;
+color:white;
+}
 </style>
 </head>
 
@@ -83,48 +120,45 @@ th{background:#2e7d32;color:white;}
 
 <h1>Reading Task Test</h1>
 
-<!-- ================= TEXT 1 ================= -->
-<div class="card">
+<!-- ================= TEXT (UNCHANGED) ================= -->
+<div class="card text" id="textCard">
+
 <h2>Green Homes, Dream Homes</h2>
 
-<p>These days, more and more people want to help the Earth...</p>
-<p>Many people now choose to do even bigger things for the Earth...</p>
-<p>Builders of green homes think about many different ways...</p>
-<p>Of course, location is also an important part...</p>
-<p>Green homes are designed to help...</p>
-<p>Although building a green home is often more expensive...</p>
+<p>
+These days, more and more people want to help the Earth. Recycling and using eco-friendly shopping bags are small changes to our daily lives that can bring important benefits to the Earth.
+</p>
+
+<p>
+Many people now choose to do even bigger things for the Earth. Some people choose to spend a little more money on their new homes in order to have a „green‟ home. 
+<span class="tag q42">Q42</span>
+The green movement started about 40 years ago, and it is very big now. 
+<span class="tag q35">Q35</span>
+Using solar energy is a very popular way to have a „green‟ home.
+</p>
+
+<p>
+Builders of green homes think about many different ways to make a building more eco-friendly. Building materials are one of the biggest decisions. 
+<span class="tag q37">Q37</span>
+The United States uses 40 percent of all its raw materials on new buildings. Green builders also want to use materials that last a very long time.
+</p>
+
+<p>
+Of course, location is also an important part of eco-construction. Homes need to be close to the things people need for their daily lives, or to public transportation. Homes also need to be in a place that doesn’t hurt the environment around them.
+</p>
+
+<p>
+Green homes are designed to help the people living in them to recycle things, use less water, and minimize energy use easily.
+</p>
+
+<p>
+<span class="tag q39">Q39</span>
+Although building a green home is often more expensive than a regular home, most owners say it’s a good idea. Most say that they are happy because their homes are more environmentally friendly, safer, cleaner, and better homes for their families.
+</p>
+
 </div>
 
-<!-- ================= LIFEKHACKS + SYNONYMS TEXT 1 ================= -->
-<div class="card">
-<h2>📌 Лайфхаки (Text 1)</h2>
-<ul>
-<li>Ищи перефраз (solar = sun energy)</li>
-<li>Числа = важные подсказки</li>
-<li>Ответ часто в том же абзаце</li>
-</ul>
-
-<h2>📚 Синонимы (Text 1)</h2>
-<table>
-<tr><th>Word</th><th>Synonym</th></tr>
-<tr><td>Eco-friendly</td><td>Green</td></tr>
-<tr><td>Help</td><td>Support</td></tr>
-<tr><td>Expensive</td><td>Costly</td></tr>
-<tr><td>Start</td><td>Begin</td></tr>
-</table>
-</div>
-
-<!-- ================= TEXT 2 ================= -->
-<div class="card">
-<h2>A Musical Boost</h2>
-
-<p>Is there a connection between music and language?...</p>
-<p>Music and Hearing...</p>
-<p>Music and Speaking...</p>
-<p>Understanding the Results...</p>
-</div>
-
-<!-- ================= QUESTIONS 43–50 ================= -->
+<!-- ================= QUESTIONS ================= -->
 <div class="card">
 <div id="quiz"></div>
 <button onclick="checkAnswers()">Check Results</button>
@@ -132,23 +166,28 @@ th{background:#2e7d32;color:white;}
 
 <div class="card" id="results"></div>
 
-<!-- ================= LIFEKHACKS + SYNONYMS TEXT 2 ================= -->
+<!-- ================= LIFEKHACKS ================= -->
 <div class="card">
-<h2>📌 Лайфхаки (Text 2)</h2>
+
+<h2>📌 Лайфхаки</h2>
 <ul>
-<li>Ищи ключевые слова: music, brain, hearing</li>
-<li>Синонимы часто перефразированы</li>
-<li>Главная идея = music helps brain</li>
+<li>Синонимдерді ізде (solar = sun energy)</li>
+<li>Жауап көбіне сол абзацта болады</li>
+<li>Сандар маңызды белгі</li>
+<li>“most / although / also” → жиі жауап бар жер</li>
 </ul>
 
-<h2>📚 Синонимы (Text 2)</h2>
+<h2>📚 Синонимдер</h2>
 <table>
-<tr><th>Word</th><th>Synonym</th></tr>
-<tr><td>Improve</td><td>Boost</td></tr>
-<tr><td>Ignore</td><td>Not pay attention</td></tr>
-<tr><td>Ability</td><td>Skill</td></tr>
-<tr><td>Study</td><td>Research</td></tr>
+<tr><th>Word</th><th>Synonym</th><th>Қазақша</th></tr>
+<tr><td>Eco-friendly</td><td>Green</td><td>Экологиялық</td></tr>
+<tr><td>Help</td><td>Support</td><td>Көмек</td></tr>
+<tr><td>Choose</td><td>Select</td><td>Таңдау</td></tr>
+<tr><td>Expensive</td><td>Costly</td><td>Қымбат</td></tr>
+<tr><td>Use</td><td>Consume</td><td>Пайдалану</td></tr>
+<tr><td>Start</td><td>Begin</td><td>Бастау</td></tr>
 </table>
+
 </div>
 
 </div>
@@ -157,14 +196,14 @@ th{background:#2e7d32;color:white;}
 <script>
 
 const questions=[
-{q:"43. Music improves:",options:["A","B","C","D"],answer:3,exp:"Music improves language abilities"},
-{q:"44. The text is about:",options:["A","B","C","D"],answer:0,exp:"Music and language connection"},
-{q:"45. Nina Kraus says:",options:["A","B","C","D"],answer:0,exp:"Music improves hearing"},
-{q:"46. Synonym of improve:",options:["A","B","C","D"],answer:1,exp:"Boost = improve"},
-{q:"47. Musicians hear better because:",options:["A","B","C","D"],answer:0,exp:"They focus on sounds"},
-{q:"48. Nina Kraus is:",options:["A","B","C","D"],answer:3,exp:"She is a researcher"},
-{q:"49. Music helps:",options:["A","B","C","D"],answer:2,exp:"Memory, listening, concentration"},
-{q:"50. Ignore means:",options:["A","B","C","D"],answer:3,exp:"Not pay attention"}
+{q:"35. Popular way of having a green home is using",options:["A) earth","B) sun","C) wind","D) sky"],answer:1,kaz:"Мәтінде solar energy айтылған."},
+{q:"36. There are many volunteers who show their _____",options:["A) difference","B) hatred","C) opinion","D) desire"],answer:3,kaz:"Адамдар Жерді қорғауға үлес қосқысы келеді = тілек, ниет."},
+{q:"37. The quality of green homes depends on",options:["A) cheap","B) new","C) regular","D) long-lasting"],answer:3,kaz:"Үй сапасы ұзаққа шыдайтын материалдарға байланысты."},
+{q:"38. Eco-friendly way of life is",options:["A) not affordable","B) less popular","C) future","D) approved"],answer:3,kaz:"Көп адамдар “green home” идеясына келіседі, қолдайды."},
+{q:"39. Building a regular home is often",options:["A) more expensive","B) much expensive","C) cheaper","D) reasonable"],answer:2,kaz:"Green үй қымбат."},
+{q:"40. Eco homes are",options:["A) not efficient","B) good for Earth","C) cheap","D) homeless"],answer:1,kaz:"Табиғатқа пайдалы."},
+{q:"41. These days people use",options:["A) eco bags","B) paper","C) modern","D) plastic"],answer:0,kaz:"Мәтінде “eco-friendly bags” қолданатыны айтылған."},
+{q:"42. The green movement",options:["A) long ago","B) several","C) decade","D) recent"],answer:0,kaz:"“about 40 years ago” = көп жыл бұрын басталған"}
 ];
 
 const quiz=document.getElementById("quiz");
@@ -197,14 +236,16 @@ res+=`<p class="wrong">✘ ${x.q}</p>`;
 
 res+=`
 <div class="explanation">
-Your answer: ${chosen}<br>
-Correct: ${x.options[x.answer]}<br>
-Explanation: ${x.exp}
+<b>Correct:</b> ${x.options[x.answer]}<br>
+<b>Your answer:</b> ${chosen}<br>
+👉 ${x.kaz}
 </div>`;
 });
 
 document.getElementById("results").innerHTML=
 `<h2>Score: ${score}/8</h2>`+res;
+
+document.getElementById("textCard").classList.add("show");
 
 }
 
