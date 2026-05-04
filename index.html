@@ -37,7 +37,6 @@ border-radius:15px;
 margin-bottom:20px;
 }
 
-/* TEXT */
 .text p{
 line-height:1.6;
 font-size:16px;
@@ -48,9 +47,9 @@ font-size:16px;
 display:none;
 font-weight:bold;
 font-size:13px;
-margin-right:6px;
 padding:3px 7px;
 border-radius:6px;
+margin-right:6px;
 }
 
 .show .tag{
@@ -67,7 +66,15 @@ display:inline-block;
 .q41{background:#ffe082;}
 .q42{background:#80cbc4;}
 
-/* QUESTIONS */
+.q43{background:#ffd54f;}
+.q44{background:#a5d6a7;}
+.q45{background:#90caf9;}
+.q46{background:#ffcc80;}
+.q47{background:#ce93d8;}
+.q48{background:#f48fb1;}
+.q49{background:#80cbc4;}
+.q50{background:#fff176;}
+
 .question{
 background:#f5f5f5;
 padding:15px;
@@ -120,74 +127,83 @@ color:white;
 
 <h1>Reading Task Test</h1>
 
-<!-- ================= TEXT (UNCHANGED) ================= -->
-<div class="card text" id="textCard">
+<!-- ================= TEXT 1 ================= -->
+<div class="card text" id="textCard1">
 
 <h2>Green Homes, Dream Homes</h2>
 
-<p>
-These days, more and more people want to help the Earth. Recycling and using eco-friendly shopping bags are small changes to our daily lives that can bring important benefits to the Earth.
-</p>
+<p>These days, more and more people want to help the Earth. Recycling and using eco-friendly shopping bags are small changes.</p>
 
 <p>
-Many people now choose to do even bigger things for the Earth. Some people choose to spend a little more money on their new homes in order to have a „green‟ home. 
+Some people choose to spend more money on homes to have a green home.
 <span class="tag q42">Q42</span>
-The green movement started about 40 years ago, and it is very big now. 
+The green movement started about 40 years ago.
 <span class="tag q35">Q35</span>
-Using solar energy is a very popular way to have a „green‟ home.
+Using solar energy is popular.
 </p>
 
 <p>
-Builders of green homes think about many different ways to make a building more eco-friendly. Building materials are one of the biggest decisions. 
+Builders think about eco-friendly materials.
 <span class="tag q37">Q37</span>
-The United States uses 40 percent of all its raw materials on new buildings. Green builders also want to use materials that last a very long time.
+Materials must last a long time.
 </p>
 
-<p>
-Of course, location is also an important part of eco-construction. Homes need to be close to the things people need for their daily lives, or to public transportation. Homes also need to be in a place that doesn’t hurt the environment around them.
-</p>
+<p>Homes should be near transport and not harm environment.</p>
 
-<p>
-Green homes are designed to help the people living in them to recycle things, use less water, and minimize energy use easily.
-</p>
+<p>Green homes help recycle, save water and energy.</p>
 
 <p>
 <span class="tag q39">Q39</span>
-Although building a green home is often more expensive than a regular home, most owners say it’s a good idea. Most say that they are happy because their homes are more environmentally friendly, safer, cleaner, and better homes for their families.
+Green homes are more expensive but better for families.
 </p>
 
 </div>
 
-<!-- ================= QUESTIONS ================= -->
+<!-- ================= TEXT 2 ================= -->
+<div class="card text" id="textCard2">
+
+<h2>A MUSICAL BOOST</h2>
+
+<p><span class="tag q43"></span>Music improves language abilities in the brain.</p>
+
+<p><span class="tag q45"></span>Playing instrument improves hearing.</p>
+
+<p><span class="tag q47"></span>Musicians focus on certain sounds.</p>
+
+<p><span class="tag q48"></span>Researchers study music and brain.</p>
+
+<p><span class="tag q49"></span>Music improves memory and concentration.</p>
+
+</div>
+
+<!-- QUESTIONS -->
 <div class="card">
 <div id="quiz"></div>
 <button onclick="checkAnswers()">Check Results</button>
 </div>
 
+<!-- RESULTS -->
 <div class="card" id="results"></div>
 
-<!-- ================= LIFEKHACKS ================= -->
+<!-- LIFEKHACKS -->
 <div class="card">
-
-<h2>📌 Лайфхаки</h2>
+<h2>📌 Лайфхак</h2>
 <ul>
-<li>Синонимдерді ізде (solar = sun energy)</li>
-<li>Жауап көбіне сол абзацта болады</li>
-<li>Сандар маңызды белгі</li>
-<li>“most / although / also” → жиі жауап бар жер</li>
+<li>Синоним ізде</li>
+<li>Сан = күшті подсказка</li>
+<li>because → себеп</li>
+<li>main idea → 1-сөйлем</li>
 </ul>
 
 <h2>📚 Синонимдер</h2>
 <table>
 <tr><th>Word</th><th>Synonym</th><th>Қазақша</th></tr>
-<tr><td>Eco-friendly</td><td>Green</td><td>Экологиялық</td></tr>
+<tr><td>Improve</td><td>Boost</td><td>Жақсарту</td></tr>
 <tr><td>Help</td><td>Support</td><td>Көмек</td></tr>
-<tr><td>Choose</td><td>Select</td><td>Таңдау</td></tr>
-<tr><td>Expensive</td><td>Costly</td><td>Қымбат</td></tr>
 <tr><td>Use</td><td>Consume</td><td>Пайдалану</td></tr>
 <tr><td>Start</td><td>Begin</td><td>Бастау</td></tr>
+<tr><td>Ignore</td><td>Pay no attention</td><td>Назар аудармау</td></tr>
 </table>
-
 </div>
 
 </div>
@@ -196,14 +212,26 @@ Although building a green home is often more expensive than a regular home, most
 <script>
 
 const questions=[
-{q:"35. Popular way of having a green home is using",options:["A) earth","B) sun","C) wind","D) sky"],answer:1,kaz:"Мәтінде solar energy айтылған."},
-{q:"36. There are many volunteers who show their _____",options:["A) difference","B) hatred","C) opinion","D) desire"],answer:3,kaz:"Адамдар Жерді қорғауға үлес қосқысы келеді = тілек, ниет."},
-{q:"37. The quality of green homes depends on",options:["A) cheap","B) new","C) regular","D) long-lasting"],answer:3,kaz:"Үй сапасы ұзаққа шыдайтын материалдарға байланысты."},
-{q:"38. Eco-friendly way of life is",options:["A) not affordable","B) less popular","C) future","D) approved"],answer:3,kaz:"Көп адамдар “green home” идеясына келіседі, қолдайды."},
-{q:"39. Building a regular home is often",options:["A) more expensive","B) much expensive","C) cheaper","D) reasonable"],answer:2,kaz:"Green үй қымбат."},
-{q:"40. Eco homes are",options:["A) not efficient","B) good for Earth","C) cheap","D) homeless"],answer:1,kaz:"Табиғатқа пайдалы."},
-{q:"41. These days people use",options:["A) eco bags","B) paper","C) modern","D) plastic"],answer:0,kaz:"Мәтінде “eco-friendly bags” қолданатыны айтылған."},
-{q:"42. The green movement",options:["A) long ago","B) several","C) decade","D) recent"],answer:0,kaz:"“about 40 years ago” = көп жыл бұрын басталған"}
+
+/* TEXT 1 */
+{q:"35. Popular way of having a green home is using",options:["earth","sun","wind","sky"],answer:1,kaz:"solar energy – күн энергиясы"},
+{q:"36. Volunteers show their _____",options:["difference","hatred","opinion","desire"],answer:3,kaz:"тілек, ниет"},
+{q:"37. Quality depends on",options:["cheap","new","regular","long-lasting"],answer:3,kaz:"ұзаққа шыдайтын материал"},
+{q:"38. Eco lifestyle is",options:["not affordable","less popular","future","approved"],answer:3,kaz:"көпшілік қолдайды"},
+{q:"39. Regular home is",options:["more expensive","much expensive","cheaper","reasonable"],answer:2,kaz:"green үй қымбат"},
+{q:"40. Eco homes are",options:["bad","good for Earth","cheap","homeless"],answer:1,kaz:"табиғатқа пайдалы"},
+{q:"41. People use",options:["eco bags","paper","modern","plastic"],answer:0,kaz:"eco-friendly bags"},
+{q:"42. Green movement",options:["many years ago","several","decade","recent"],answer:0,kaz:"40 years ago"},
+
+/* TEXT 2 */
+{q:"43. Music improves:",options:["reading","writing","hearing","language"],answer:3,kaz:"тілдік қабілет"},
+{q:"44. Text is about",options:["music-language","instruments","musicians","patients"],answer:0,kaz:"music and language"},
+{q:"45. Nina Kraus says",options:["hearing improves","dancing","speaking","writing"],answer:0,kaz:"instrument helps hearing"},
+{q:"46. Synonym improve",options:["roast","boost","toast","goast"],answer:1,kaz:"boost = improve"},
+{q:"47. Musicians hear better",options:["attention","singing","instruments","brain"],answer:0,kaz:"focus on sounds"},
+{q:"48. True statement",options:["violinist","musician","graduate","researcher"],answer:3,kaz:"researcher"},
+{q:"49. Music helps",options:["reading","sleeping","memory","writing"],answer:2,kaz:"memory + concentration"},
+{q:"50. Ignore means",options:["stay","look","vote","no attention"],answer:3,kaz:"назар аудармау"}
 ];
 
 const quiz=document.getElementById("quiz");
@@ -227,25 +255,22 @@ questions.forEach((x,i)=>{
 let sel=document.querySelector(`input[name=q${i}]:checked`);
 let chosen=sel?x.options[sel.value]:"no answer";
 
-if(sel && sel.value==x.answer){
-score++;
-res+=`<p class="correct">✔ ${x.q}</p>`;
-}else{
-res+=`<p class="wrong">✘ ${x.q}</p>`;
-}
+if(sel && sel.value==x.answer) score++;
 
 res+=`
 <div class="explanation">
-<b>Correct:</b> ${x.options[x.answer]}<br>
-<b>Your answer:</b> ${chosen}<br>
+<b>${x.q}</b><br>
+Correct: ${x.options[x.answer]}<br>
+Your: ${chosen}<br>
 👉 ${x.kaz}
 </div>`;
 });
 
 document.getElementById("results").innerHTML=
-`<h2>Score: ${score}/8</h2>`+res;
+`<h2>Score: ${score}/16</h2>`+res;
 
-document.getElementById("textCard").classList.add("show");
+document.getElementById("textCard1").classList.add("show");
+document.getElementById("textCard2").classList.add("show");
 
 }
 
@@ -253,4 +278,3 @@ document.getElementById("textCard").classList.add("show");
 
 </body>
 </html>
-
