@@ -25,10 +25,7 @@ max-width:1100px;
 margin:auto;
 }
 
-h1{
-color:white;
-text-align:center;
-}
+h1{color:white;text-align:center;}
 
 .card{
 background:white;
@@ -36,44 +33,6 @@ padding:25px;
 border-radius:15px;
 margin-bottom:20px;
 }
-
-.text p{
-line-height:1.6;
-font-size:16px;
-}
-
-/* TAGS */
-.tag{
-display:none;
-font-weight:bold;
-font-size:13px;
-padding:3px 7px;
-border-radius:6px;
-margin-right:6px;
-}
-
-.show .tag{
-display:inline-block;
-}
-
-/* COLORS */
-.q35{background:#fff176;}
-.q36{background:#a5d6a7;}
-.q37{background:#90caf9;}
-.q38{background:#ffcc80;}
-.q39{background:#ce93d8;}
-.q40{background:#f48fb1;}
-.q41{background:#ffe082;}
-.q42{background:#80cbc4;}
-
-.q43{background:#ffd54f;}
-.q44{background:#a5d6a7;}
-.q45{background:#90caf9;}
-.q46{background:#ffcc80;}
-.q47{background:#ce93d8;}
-.q48{background:#f48fb1;}
-.q49{background:#80cbc4;}
-.q50{background:#fff176;}
 
 .question{
 background:#f5f5f5;
@@ -113,10 +72,7 @@ border:1px solid #ccc;
 padding:10px;
 }
 
-th{
-background:#2e7d32;
-color:white;
-}
+th{background:#2e7d32;color:white;}
 </style>
 </head>
 
@@ -128,81 +84,70 @@ color:white;
 <h1>Reading Task Test</h1>
 
 <!-- ================= TEXT 1 ================= -->
-<div class="card text" id="textCard1">
-
+<div class="card">
 <h2>Green Homes, Dream Homes</h2>
 
-<p>These days, more and more people want to help the Earth. Recycling and using eco-friendly shopping bags are small changes.</p>
+<p>These days, more and more people want to help the Earth...</p>
+<p>Many people now choose to do even bigger things for the Earth...</p>
+<p>Builders of green homes think about many different ways...</p>
+<p>Of course, location is also an important part...</p>
+<p>Green homes are designed to help...</p>
+<p>Although building a green home is often more expensive...</p>
+</div>
 
-<p>
-Some people choose to spend more money on homes to have a green home.
-<span class="tag q42">Q42</span>
-The green movement started about 40 years ago.
-<span class="tag q35">Q35</span>
-Using solar energy is popular.
-</p>
+<!-- ================= LIFEKHACKS + SYNONYMS TEXT 1 ================= -->
+<div class="card">
+<h2>📌 Лайфхаки (Text 1)</h2>
+<ul>
+<li>Ищи перефраз (solar = sun energy)</li>
+<li>Числа = важные подсказки</li>
+<li>Ответ часто в том же абзаце</li>
+</ul>
 
-<p>
-Builders think about eco-friendly materials.
-<span class="tag q37">Q37</span>
-Materials must last a long time.
-</p>
-
-<p>Homes should be near transport and not harm environment.</p>
-
-<p>Green homes help recycle, save water and energy.</p>
-
-<p>
-<span class="tag q39">Q39</span>
-Green homes are more expensive but better for families.
-</p>
-
+<h2>📚 Синонимы (Text 1)</h2>
+<table>
+<tr><th>Word</th><th>Synonym</th></tr>
+<tr><td>Eco-friendly</td><td>Green</td></tr>
+<tr><td>Help</td><td>Support</td></tr>
+<tr><td>Expensive</td><td>Costly</td></tr>
+<tr><td>Start</td><td>Begin</td></tr>
+</table>
 </div>
 
 <!-- ================= TEXT 2 ================= -->
-<div class="card text" id="textCard2">
+<div class="card">
+<h2>A Musical Boost</h2>
 
-<h2>A MUSICAL BOOST</h2>
-
-<p><span class="tag q43"></span>Music improves language abilities in the brain.</p>
-
-<p><span class="tag q45"></span>Playing instrument improves hearing.</p>
-
-<p><span class="tag q47"></span>Musicians focus on certain sounds.</p>
-
-<p><span class="tag q48"></span>Researchers study music and brain.</p>
-
-<p><span class="tag q49"></span>Music improves memory and concentration.</p>
-
+<p>Is there a connection between music and language?...</p>
+<p>Music and Hearing...</p>
+<p>Music and Speaking...</p>
+<p>Understanding the Results...</p>
 </div>
 
-<!-- QUESTIONS -->
+<!-- ================= QUESTIONS 43–50 ================= -->
 <div class="card">
 <div id="quiz"></div>
 <button onclick="checkAnswers()">Check Results</button>
 </div>
 
-<!-- RESULTS -->
 <div class="card" id="results"></div>
 
-<!-- LIFEKHACKS -->
+<!-- ================= LIFEKHACKS + SYNONYMS TEXT 2 ================= -->
 <div class="card">
-<h2>📌 Лайфхак</h2>
+<h2>📌 Лайфхаки (Text 2)</h2>
 <ul>
-<li>Синоним ізде</li>
-<li>Сан = күшті подсказка</li>
-<li>because → себеп</li>
-<li>main idea → 1-сөйлем</li>
+<li>Ищи ключевые слова: music, brain, hearing</li>
+<li>Синонимы часто перефразированы</li>
+<li>Главная идея = music helps brain</li>
 </ul>
 
-<h2>📚 Синонимдер</h2>
+<h2>📚 Синонимы (Text 2)</h2>
 <table>
-<tr><th>Word</th><th>Synonym</th><th>Қазақша</th></tr>
-<tr><td>Improve</td><td>Boost</td><td>Жақсарту</td></tr>
-<tr><td>Help</td><td>Support</td><td>Көмек</td></tr>
-<tr><td>Use</td><td>Consume</td><td>Пайдалану</td></tr>
-<tr><td>Start</td><td>Begin</td><td>Бастау</td></tr>
-<tr><td>Ignore</td><td>Pay no attention</td><td>Назар аудармау</td></tr>
+<tr><th>Word</th><th>Synonym</th></tr>
+<tr><td>Improve</td><td>Boost</td></tr>
+<tr><td>Ignore</td><td>Not pay attention</td></tr>
+<tr><td>Ability</td><td>Skill</td></tr>
+<tr><td>Study</td><td>Research</td></tr>
 </table>
 </div>
 
@@ -212,26 +157,14 @@ Green homes are more expensive but better for families.
 <script>
 
 const questions=[
-
-/* TEXT 1 */
-{q:"35. Popular way of having a green home is using",options:["earth","sun","wind","sky"],answer:1,kaz:"solar energy – күн энергиясы"},
-{q:"36. Volunteers show their _____",options:["difference","hatred","opinion","desire"],answer:3,kaz:"тілек, ниет"},
-{q:"37. Quality depends on",options:["cheap","new","regular","long-lasting"],answer:3,kaz:"ұзаққа шыдайтын материал"},
-{q:"38. Eco lifestyle is",options:["not affordable","less popular","future","approved"],answer:3,kaz:"көпшілік қолдайды"},
-{q:"39. Regular home is",options:["more expensive","much expensive","cheaper","reasonable"],answer:2,kaz:"green үй қымбат"},
-{q:"40. Eco homes are",options:["bad","good for Earth","cheap","homeless"],answer:1,kaz:"табиғатқа пайдалы"},
-{q:"41. People use",options:["eco bags","paper","modern","plastic"],answer:0,kaz:"eco-friendly bags"},
-{q:"42. Green movement",options:["many years ago","several","decade","recent"],answer:0,kaz:"40 years ago"},
-
-/* TEXT 2 */
-{q:"43. Music improves:",options:["reading","writing","hearing","language"],answer:3,kaz:"тілдік қабілет"},
-{q:"44. Text is about",options:["music-language","instruments","musicians","patients"],answer:0,kaz:"music and language"},
-{q:"45. Nina Kraus says",options:["hearing improves","dancing","speaking","writing"],answer:0,kaz:"instrument helps hearing"},
-{q:"46. Synonym improve",options:["roast","boost","toast","goast"],answer:1,kaz:"boost = improve"},
-{q:"47. Musicians hear better",options:["attention","singing","instruments","brain"],answer:0,kaz:"focus on sounds"},
-{q:"48. True statement",options:["violinist","musician","graduate","researcher"],answer:3,kaz:"researcher"},
-{q:"49. Music helps",options:["reading","sleeping","memory","writing"],answer:2,kaz:"memory + concentration"},
-{q:"50. Ignore means",options:["stay","look","vote","no attention"],answer:3,kaz:"назар аудармау"}
+{q:"43. Music improves:",options:["A","B","C","D"],answer:3,exp:"Music improves language abilities"},
+{q:"44. The text is about:",options:["A","B","C","D"],answer:0,exp:"Music and language connection"},
+{q:"45. Nina Kraus says:",options:["A","B","C","D"],answer:0,exp:"Music improves hearing"},
+{q:"46. Synonym of improve:",options:["A","B","C","D"],answer:1,exp:"Boost = improve"},
+{q:"47. Musicians hear better because:",options:["A","B","C","D"],answer:0,exp:"They focus on sounds"},
+{q:"48. Nina Kraus is:",options:["A","B","C","D"],answer:3,exp:"She is a researcher"},
+{q:"49. Music helps:",options:["A","B","C","D"],answer:2,exp:"Memory, listening, concentration"},
+{q:"50. Ignore means:",options:["A","B","C","D"],answer:3,exp:"Not pay attention"}
 ];
 
 const quiz=document.getElementById("quiz");
@@ -255,22 +188,23 @@ questions.forEach((x,i)=>{
 let sel=document.querySelector(`input[name=q${i}]:checked`);
 let chosen=sel?x.options[sel.value]:"no answer";
 
-if(sel && sel.value==x.answer) score++;
+if(sel && sel.value==x.answer){
+score++;
+res+=`<p class="correct">✔ ${x.q}</p>`;
+}else{
+res+=`<p class="wrong">✘ ${x.q}</p>`;
+}
 
 res+=`
 <div class="explanation">
-<b>${x.q}</b><br>
+Your answer: ${chosen}<br>
 Correct: ${x.options[x.answer]}<br>
-Your: ${chosen}<br>
-👉 ${x.kaz}
+Explanation: ${x.exp}
 </div>`;
 });
 
 document.getElementById("results").innerHTML=
-`<h2>Score: ${score}/16</h2>`+res;
-
-document.getElementById("textCard1").classList.add("show");
-document.getElementById("textCard2").classList.add("show");
+`<h2>Score: ${score}/8</h2>`+res;
 
 }
 
