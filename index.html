@@ -2,243 +2,200 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Reading Task Test</title>
+<title>Reading Task</title>
 
 <style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-image: url("7B0E287F-F290-41E8-B4EB-ACD98AFFCB92.png");
-  background-size: cover;
-  background-position: center;
-  min-height: 100vh;
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background-image:url("7B0E287F-F290-41E8-B4EB-ACD98AFFCB92.png");
+background-size:cover;
+background-position:center;
 }
 
-.overlay {
-  background: rgba(0,0,0,0.7);
-  min-height: 100vh;
-  padding: 50px 0;
+.overlay{
+background:rgba(0,0,0,0.7);
+min-height:100vh;
+padding:40px;
 }
 
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 30px;
-  padding: 40px;
+.container{
+max-width:1000px;
+margin:auto;
 }
 
-h1 {
-  color: white;
-  font-size: 42px;
-  text-align: center;
-  padding: 20px 40px;
-  border: 2px solid white;
-  border-radius: 12px;
-  background: rgba(255,255,255,0.1);
+.card{
+background:white;
+padding:30px;
+border-radius:20px;
+margin-bottom:30px;
 }
 
-.reading-card {
-  width: 80%;
-  max-width: 950px;
-  background: rgba(255,255,255,0.96);
-  border-radius: 18px;
-  padding: 35px;
-  box-shadow: 0 12px 35px rgba(0,0,0,0.35);
-  color: #222;
-  line-height: 1.8;
-  font-size: 18px;
+h1{
+color:white;
+text-align:center;
 }
 
-.reading-card h2, .reading-card h3 {
-  text-align: center;
-  color: #2e7d32;
+.question{
+margin-bottom:25px;
+padding:20px;
+background:#f5f5f5;
+border-left:5px solid #2e7d32;
+border-radius:12px;
 }
 
-.question {
-  margin-bottom: 25px;
-  padding: 20px;
-  background: #f8f8f8;
-  border-left: 5px solid #2e7d32;
-  border-radius: 12px;
+button{
+background:#2e7d32;
+color:white;
+border:none;
+padding:15px 30px;
+font-size:18px;
+border-radius:10px;
+cursor:pointer;
 }
 
-button {
-  background: #2e7d32;
-  color: white;
-  border: none;
-  padding: 15px 30px;
-  border-radius: 10px;
-  font-size: 18px;
-  cursor: pointer;
+.correct{color:green;font-weight:bold;}
+.wrong{color:red;font-weight:bold;}
+
+.explanation{
+background:#eef7ee;
+padding:15px;
+margin-top:10px;
+border-radius:10px;
 }
 
-button:hover {
-  background: #1b5e20;
+mark{
+background:transparent;
+padding:4px;
+border-radius:6px;
+transition:0.4s;
 }
 
-.correct {
-  color: green;
-  font-weight: bold;
+.show mark{
+background:#fff176;
 }
 
-.wrong {
-  color: red;
-  font-weight: bold;
+.label{
+display:none;
+font-size:14px;
+font-weight:bold;
+color:#2e7d32;
 }
 
-.explanation {
-  background: #eef7ee;
-  padding: 15px;
-  margin-top: 10px;
-  border-radius: 10px;
-}
-
-mark {
-  background: #fff176;
-  padding: 3px 6px;
-  border-radius: 5px;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
-}
-
-th, td {
-  border: 1px solid #ccc;
-  padding: 12px;
-}
-
-th {
-  background: #2e7d32;
-  color: white;
-}
-
-ul li {
-  margin-bottom: 12px;
+.show .label{
+display:inline;
 }
 </style>
 </head>
 
 <body>
-
 <div class="overlay">
 <div class="container">
 
-<h1>
-Ағылшын тілі<br>
-Reading Task Tests
-</h1>
+<h1>Ағылшын тілі Reading Task Tests</h1>
 
-<div class="reading-card">
-<h2>Text 1</h2>
-<h3>Green Homes, Dream Homes</h3>
+<div class="card" id="textCard">
+<h2>Text 1: Green Homes, Dream Homes</h2>
 
-<p>These days, more and more people want to help the Earth. Recycling and using <mark>eco-friendly shopping bags</mark> are small changes to our daily lives.</p>
+<p>
+These days, more and more people want to help the Earth. Recycling and using
+<span class="label">Q41</span><mark>eco-friendly shopping bags</mark>
+are small changes to our daily lives that can bring important benefits.
+</p>
 
-<p>Many people now choose to do even bigger things for the Earth. Some people choose to spend a little more money on their new homes in order to have a "green" home. <mark>The green movement started about 40 years ago.</mark> <mark>Using solar energy is a very popular way</mark> to have a green home.</p>
+<p>
+Many people now choose to do even bigger things for the Earth. Some people choose
+to spend a little more money on their new homes in order to have a green home.
 
-<p>Green builders also want to use <mark>materials that last a very long time.</mark></p>
+<span class="label">Q42</span><mark>The green movement started about 40 years ago</mark>.
 
-<p>Green homes help people recycle things, use less water, and minimize energy use.</p>
+<span class="label">Q35</span><mark>Using solar energy is a very popular way</mark>
+to have a green home.
+</p>
 
-<p><mark>Although building a green home is often more expensive than a regular home</mark>, most owners say it’s a good idea.</p>
+<p>
+Builders think about materials.
+
+<span class="label">Q37</span><mark>Green builders also want to use materials that last a very long time</mark>.
+</p>
+
+<p>
+Green homes help people recycle, use less water and minimize energy.
+</p>
+
+<p>
+<span class="label">Q39</span><mark>Although building a green home is often more expensive than a regular home</mark>,
+most owners say it’s a good idea.
+
+This shows eco homes are
+<span class="label">Q40</span><mark>good for the Earth</mark>
+and supported by many people
+<span class="label">Q38</span><mark>more and more people choose this lifestyle</mark>.
+</p>
+
 </div>
 
-<div class="reading-card">
-<h2>Test Questions</h2>
+<div class="card">
 <div id="quiz"></div>
-
 <div style="text-align:center;">
 <button onclick="checkAnswers()">Check Results</button>
 </div>
-
-<div id="results"></div>
 </div>
 
-<div class="reading-card">
-<h2>📚 Лайфхактар және Синонимдер</h2>
-
-<h3>Лайфхактар</h3>
-<ul>
-<li>Сұрақтағы кілт сөзді тап</li>
-<li>Синонимдерге назар аудар</li>
-<li>Сандар мен уақытты тексер</li>
-<li>Main idea сұрағында бүкіл мәтінді ойла</li>
-<li>Салыстыру сөздерін байқап оқы</li>
-</ul>
-
-<h3>Синонимдер</h3>
-
-<table>
-<tr>
-<th>Word</th>
-<th>Synonym</th>
-<th>Қазақша</th>
-</tr>
-<tr><td>Solar</td><td>Sun energy</td><td>Күн энергиясы</td></tr>
-<tr><td>Desire</td><td>Wish</td><td>Тілек</td></tr>
-<tr><td>Long-lasting</td><td>Durable</td><td>Ұзаққа шыдайтын</td></tr>
-<tr><td>Eco-friendly</td><td>Environmentally friendly</td><td>Экологиялық</td></tr>
-<tr><td>Expensive</td><td>Costly</td><td>Қымбат</td></tr>
-<tr><td>Started</td><td>Began</td><td>Басталды</td></tr>
-</table>
-</div>
+<div class="card" id="results"></div>
 
 </div>
 </div>
 
 <script>
-const questions = [
+const questions=[
 {
 q:"35. Popular way of having a green home is using",
 options:["A) energy from the earth","B) energy from the sun","C) energy from the wind","D) energy from the sky"],
 answer:1,
-explanation:"Мәтінде 'Using solar energy'. Solar = күн энергиясы."
+exp:"Solar energy = күн энергиясы. Мәтінде нақты айтылған."
 },
 {
 q:"36. There are many volunteers who show their _____",
 options:["A) difference","B) hatred","C) opinion","D) desire"],
 answer:3,
-explanation:"Адамдар Жерге көмектескісі келеді → desire."
+exp:"People want to help Earth. Бұл тілек дегенді білдіреді."
 },
 {
-q:"37. The quality of green homes depends on",
-options:["A) cheap raw materials","B) up-to-date building materials","C) regular building materials","D) long-lasting building materials"],
+q:"37. Quality depends on",
+options:["A) cheap","B) up-to-date","C) regular","D) long-lasting"],
 answer:3,
-explanation:"Long-lasting materials."
+exp:"Long-lasting = ұзаққа шыдайтын материал."
 },
 {
-q:"38. Eco-friendly way of life is",
+q:"38. Eco-friendly way is",
 options:["A) not affordable","B) less popular","C) future plan","D) approved by majority"],
 answer:3,
-explanation:"More and more people choose it."
+exp:"More and more people choose it."
 },
 {
-q:"39. Building a regular home is often",
+q:"39. Regular home is often",
 options:["A) more expensive","B) much more expensive","C) cheaper","D) more reasonable"],
 answer:2,
-explanation:"Green homes are more expensive."
+exp:"Green home қымбат → regular арзанырақ."
 },
 {
-q:"40. Eco-friendly houses are",
-options:["A) not efficient","B) good for Earth","C) cheap","D) for homeless"],
+q:"40. Eco houses are",
+options:["A) not efficient","B) good for Earth","C) cheap","D) homeless"],
 answer:1,
-explanation:"Main idea = helping Earth."
+exp:"Негізгі идея — Earth protection."
 },
 {
-q:"41. These days people use",
-options:["A) eco-friendly shopping bags","B) paper bags","C) modern bags","D) plastic bags"],
+q:"41. People use",
+options:["A) eco-friendly shopping bags","B) paper","C) modern","D) plastic"],
 answer:0,
-explanation:"Directly stated."
+exp:"Бірінші абзацта тікелей берілген."
 },
 {
-q:"42. The green movement",
-options:["A) started many years ago","B) several years ago","C) lasted decade","D) started recently"],
+q:"42. Green movement",
+options:["A) started many years ago","B) several years ago","C) decade","D) recent"],
 answer:0,
-explanation:"Started 40 years ago."
+exp:"40 years ago = көп жыл бұрын."
 }
 ];
 
@@ -255,26 +212,30 @@ quiz.innerHTML+=html;
 
 function checkAnswers(){
 let score=0;
-let resultHTML="";
+let output=`<h2>Your Score: </h2>`;
 
 questions.forEach((item,index)=>{
-const selected=document.querySelector(`input[name="q${index}"]:checked`);
+const selected=document.querySelector(`input[name=q${index}]:checked`);
+let chosen=selected?item.options[selected.value]:"Жауап таңдалмады";
 
 if(selected && parseInt(selected.value)===item.answer){
 score++;
-resultHTML+=`<p class="correct">✔ ${item.q}</p>`;
+output+=`<p class="correct">✔ ${item.q}</p>`;
 }else{
-resultHTML+=`<p class="wrong">✘ ${item.q}</p>`;
+output+=`<p class="wrong">✘ ${item.q}</p>`;
 }
 
-resultHTML+=`
+output+=`
 <div class="explanation">
-<strong>Дұрыс жауап:</strong> ${item.options[item.answer]}<br>
-${item.explanation}
+Сенің жауабың: ${chosen}<br>
+Дұрыс жауап: <strong>${item.options[item.answer]}</strong><br>
+Түсіндірме: ${item.exp}<br>
+Мәтіндегі дәлелі: Q${35+index} белгісін қара
 </div><br>`;
 });
 
-document.getElementById("results").innerHTML=`<h2>Your Score: ${score}/8</h2>`+resultHTML;
+document.getElementById("results").innerHTML=`<h1>${score}/8</h1>`+output;
+document.getElementById("textCard").classList.add("show");
 }
 </script>
 
